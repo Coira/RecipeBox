@@ -1,0 +1,19 @@
+#+STARTUP: showall
+#+STARTUP: indent
+
+#+TITLE: Component Hierarchy
+
+* App
+** Title Bar
+** Sidebar
+*** TagsContainer
+**** Tag
+** RecipesContainer
+*** Recipe Link
+**** Recipe Info
+** Recipe
+*** Ingredients
+*** Method
+*** Recipe info
+*** Image
+

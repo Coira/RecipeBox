@@ -1,0 +1,21 @@
+@import './styles/app';
+@import './styles/titlebar';
+@import './styles/sidebar';
+@import './styles/recipesContainer';
+@import './styles/tag';
+@import './styles/tagsContainer';
+@import './styles/recipeLink';
+@import './styles/recipe';
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
