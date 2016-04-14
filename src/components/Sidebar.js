@@ -1,9 +1,9 @@
 import React from 'react';
 import TagsContainer from './TagsContainer';
 
-const Sidebar = () => (
+const Sidebar = ({tags}) => (
     <div className="sidebar">Sidebar
-	<TagsContainer/>
+	<TagsContainer tags={tags}/>
     </div>
 );
 

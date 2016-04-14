@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Tag = ({label}) => (
-    <div className="tag">{label}</div>
+const Tag = ({name}) => (
+    <div className="tag">{name}</div>
 );
 
 Tag.propTyes = {
-    label: React.PropTypes.string.isRequired
+    name: React.PropTypes.string.isRequired
 }
 
 
