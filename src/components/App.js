@@ -1,7 +1,7 @@
 import React from 'react';
 import Titlebar from './TitleBar';
 import RecipeLinkContainer from './RecipeLinkContainer';
-
+import Footer from './Footer';
 
 class App extends React.Component {
     constructor(props) {
@@ -27,6 +27,7 @@ class App extends React.Component {
 	    <div>
 		<Titlebar/>
 		<RecipeLinkContainer recipes={this.state.recipes}/>
+		<Footer />
 	    </div>
 	);
     }

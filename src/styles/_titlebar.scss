@@ -9,9 +9,21 @@
     font-size: 40px;
     color: white;
     margin: 10px;
+    margin-bottom: 0px;
 }
 
-.links {
-    margin: 5px;
-    margin-left: 10px;
+.fixedHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background-color: #aa0000;
 }
+
+.link {
+    margin-top: 8px;
+    color: black;
+}
+
+

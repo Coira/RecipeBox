@@ -1,0 +1,1 @@
+Use inkscape (or an equivalent svg program with layers) and toggle layers to see the various states of the mockup.
