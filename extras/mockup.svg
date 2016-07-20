@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="drawing.svg">
+   sodipodi:docname="mockup.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="615.22913"
+     inkscape:cx="84.405512"
      inkscape:cy="681.54742"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -202,7 +202,7 @@
          id="tspan4202"
          style="font-size:20px">Yellow: Recipe List</tspan></text>
     <rect
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffcb1f;stroke-width:2.98360467;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#e9ba00;stroke-width:6;stroke-opacity:1"
        id="rect4204"
        width="541.01642"
        height="420.01639"
@@ -228,7 +228,7 @@
            y="148.36221"
            x="712"
            id="tspan4210"
-           sodipodi:role="line"></tspan><tspan
+           sodipodi:role="line" /><tspan
            y="167.11221"
            x="712"
            sodipodi:role="line"
@@ -408,7 +408,7 @@
          sodipodi:role="line"
          id="tspan4323"
          x="665"
-         y="172.3622"></tspan><tspan
+         y="172.3622" /><tspan
          sodipodi:role="line"
          x="665"
          y="191.1122"

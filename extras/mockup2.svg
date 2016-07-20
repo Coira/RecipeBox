@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="mockup2.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="924.81745"
+     inkscape:cy="759.16975"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="false"
+     showguides="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="mockup"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#e6e6e6;stroke-width:6;stroke-opacity:1"
+       id="rect3336"
+       width="1700"
+       height="1057.1428"
+       x="-805.71429"
+       y="-96.209221" />
+    <rect
+       style="opacity:1;fill:#aa0000;fill-opacity:1;stroke:none;stroke-width:6;stroke-opacity:1"
+       id="rect3338"
+       width="1700"
+       height="185.71428"
+       x="-805.71423"
+       y="-99.06636" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:6;stroke-opacity:1"
+       id="rect3340"
+       width="1697.1428"
+       height="40"
+       x="-805.71429"
+       y="920.93365" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:6.00000048;stroke-opacity:1"
+       id="rect3345"
+       width="1574.2858"
+       height="182.85715"
+       x="-774.28571"
+       y="155.21935" />
+    <rect
+       y="369.50507"
+       x="-774.28571"
+       height="182.85715"
+       width="1574.2858"
+       id="rect3347"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:6;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:6;stroke-opacity:1"
+       id="rect3349"
+       width="1574.2858"
+       height="182.85715"
+       x="-771.42859"
+       y="583.79077" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#b3b3b3;stroke-width:6;stroke-opacity:1"
+       id="rect3351"
+       width="45.714287"
+       height="827.38794"
+       x="845.71429"
+       y="87.484749" />
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:#b3b3b3;stroke-width:6;stroke-opacity:1"
+       id="rect3353"
+       width="40.406101"
+       height="161.6244"
+       x="848.5282"
+       y="129.08278" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-763.67535"
+       y="46.250252"
+       id="text3357"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3359"
+         x="-763.67535"
+         y="46.250252">Home</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-593.9696"
+       y="46.25029"
+       id="text3361"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3363"
+         x="-593.9696"
+         y="46.25029">Add Recipe</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-769.73621"
+       y="-28.501028"
+       id="text3365"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3367"
+         x="-769.73621"
+         y="-28.501028"
+         style="font-size:60px;fill:#ffffff">Recipe Box</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3369"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion3371"><rect
+           id="rect3373"
+           width="1161.6754"
+           height="40.406101"
+           x="-276.7818"
+           y="15.945694" /></flowRegion><flowPara
+         id="flowPara3375" /></flowRoot>    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:#800000;stroke-width:6;stroke-opacity:1"
+       id="rect3381"
+       width="1187.9393"
+       height="42.426407"
+       x="-315.1676"
+       y="13.925389" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-288.90359"
+       y="48.270584"
+       id="text3377"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3379"
+         x="-288.90359"
+         y="48.270584">Search (maybe)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-787.91901"
+       y="951.34698"
+       id="text3383"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3385"
+         x="-787.91901"
+         y="951.34698">See the full code on Github</tspan></text>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#800000;stroke-width:6;stroke-opacity:1"
+       id="rect3387"
+       width="155.56349"
+       height="141.42137"
+       x="-755.59412"
+       y="173.5295" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-571.74634"
+       y="217.97621"
+       id="text3389"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3391"
+         x="-571.74634"
+         y="217.97621">Recipe Title</tspan></text>
+    <rect
+       y="-96.209221"
+       x="974.1745"
+       height="1057.1428"
+       width="1700"
+       id="rect3393"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#e6e6e6;stroke-width:6;stroke-opacity:1" />
+    <rect
+       y="-99.06636"
+       x="974.17456"
+       height="185.71428"
+       width="1700"
+       id="rect3395"
+       style="opacity:1;fill:#aa0000;fill-opacity:1;stroke:none;stroke-width:6;stroke-opacity:1" />
+    <rect
+       y="920.93365"
+       x="974.1745"
+       height="40"
+       width="1697.1428"
+       id="rect3397"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:6;stroke-opacity:1" />
+    <rect
+       y="297.5965"
+       x="1387.1559"
+       height="586.97162"
+       width="25.511236"
+       id="rect3405"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#b3b3b3;stroke-width:5.99999952;stroke-opacity:1" />
+    <rect
+       y="314.95084"
+       x="1389.97"
+       height="161.6244"
+       width="18.182745"
+       id="rect3407"
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:#b3b3b3;stroke-width:6;stroke-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3409"
+       y="46.250252"
+       x="1016.2134"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="46.250252"
+         x="1016.2134"
+         id="tspan3411"
+         sodipodi:role="line">Home</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3413"
+       y="46.25029"
+       x="1185.9192"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="46.25029"
+         x="1185.9192"
+         id="tspan3415"
+         sodipodi:role="line">Add Recipe</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3417"
+       y="-28.501028"
+       x="1010.1526"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:60px;fill:#ffffff"
+         y="-28.501028"
+         x="1010.1526"
+         id="tspan3419"
+         sodipodi:role="line">Recipe Box</tspan></text>
+    <rect
+       y="13.925389"
+       x="1464.7212"
+       height="42.426407"
+       width="1187.9393"
+       id="rect3421"
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:#800000;stroke-width:6;stroke-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3423"
+       y="48.270584"
+       x="1490.9852"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="48.270584"
+         x="1490.9852"
+         id="tspan3425"
+         sodipodi:role="line">Search (maybe)</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3427"
+       y="951.34698"
+       x="991.96979"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="951.34698"
+         x="991.96979"
+         id="tspan3429"
+         sodipodi:role="line">See the full code on Github</tspan></text>
+    <rect
+       y="114.94064"
+       x="1038.4369"
+       height="141.42137"
+       width="155.56349"
+       id="rect3437"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#800000;stroke-width:6;stroke-opacity:1" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3439"
+       style="font-style:normal;font-weight:normal;font-size:50px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-16.162443,-72.730984)"><flowRegion
+         id="flowRegion3441"><rect
+           id="rect3443"
+           width="804.08136"
+           height="200.01021"
+           x="1256.6298"
+           y="213.93559"
+           style="font-size:50px" /></flowRegion><flowPara
+         id="flowPara3445"
+         style="font-size:70px">Recipe Title</flowPara></flowRoot>    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-opacity:1"
+       id="rect3461"
+       width="1695.036"
+       height="826.30475"
+       x="973.78693"
+       y="88.676636" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3447"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-72.730983,-42.426407)"><flowRegion
+         id="flowRegion3449"><rect
+           id="rect3451"
+           width="383.85797"
+           height="353.55341"
+           x="1139.452"
+           y="393.74274" /></flowRegion><flowPara
+         id="flowPara3453">Ingredients</flowPara><flowPara
+         id="flowPara3465">   + item 1</flowPara><flowPara
+         id="flowPara3469">   + item 2</flowPara><flowPara
+         id="flowPara3471">   + item 3</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1046.5182"
+       y="684.66669"
+       id="text3473"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3475"
+         x="1046.5182"
+         y="684.66669">+ 30 minutes</tspan><tspan
+         sodipodi:role="line"
+         x="1046.5182"
+         y="728.41669"
+         id="tspan3477">+ gas mark 5</tspan></text>
+    <g
+       id="g3504"
+       transform="translate(-161.62441,-36.365491)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3455"
+         y="417.98642"
+         x="1674.8329"
+         style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="417.98642"
+           x="1674.8329"
+           id="tspan3457"
+           sodipodi:role="line">Method</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3479"
+         y="514.96106"
+         x="1690.9954"
+         style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="514.96106"
+           x="1690.9954"
+           id="tspan3481"
+           sodipodi:role="line">1. Do this blah blah</tspan><tspan
+           id="tspan3483"
+           y="558.71106"
+           x="1690.9954"
+           sodipodi:role="line">2. Mix a lot</tspan><tspan
+           id="tspan3485"
+           y="602.46106"
+           x="1690.9954"
+           sodipodi:role="line">3. Pour into cake tin</tspan><tspan
+           id="tspan3487"
+           y="646.21106"
+           x="1690.9954"
+           sodipodi:role="line">4. Bake for 30 minutes</tspan></text>
+    </g>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.99999976;stroke-opacity:1"
+       id="rect3530"
+       width="1610.1831"
+       height="2.0203052"
+       x="1038.4368"
+       y="270.50415" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#b3b3b3;stroke-width:5.99999952;stroke-opacity:1"
+       id="rect3538"
+       width="25.511236"
+       height="586.97162"
+       x="2615.5015"
+       y="293.55588" />
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:#b3b3b3;stroke-width:6;stroke-opacity:1"
+       id="rect3540"
+       width="18.182745"
+       height="161.6244"
+       x="2616.2952"
+       y="337.17419" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-569.72601"
+       y="274.54474"
+       id="text3542"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3544"
+         x="-569.72601"
+         y="274.54474"
+         style="font-size:25px">Prep Time: 30 minutes</tspan><tspan
+         sodipodi:role="line"
+         x="-569.72601"
+         y="305.79474"
+         id="tspan3546"
+         style="font-size:25px">Cook Time: 15 minutes</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="components breakdown"
+     style="display:none">
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#e6e6e6;stroke-width:6;stroke-opacity:1"
+       id="rect3336-3"
+       width="1700"
+       height="1057.1428"
+       x="-805.71429"
+       y="-96.209198" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#aa0000;stroke-width:6;stroke-opacity:1"
+       id="rect3338-6"
+       width="1700"
+       height="185.71428"
+       x="-805.71423"
+       y="-99.066338" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:6;stroke-opacity:1"
+       id="rect3340-0"
+       width="1697.1428"
+       height="40"
+       x="-805.71429"
+       y="920.93372" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#d4aa00;stroke-width:6.00000048;stroke-opacity:1"
+       id="rect3345-5"
+       width="1521.7578"
+       height="182.85715"
+       x="-750.04199"
+       y="217.84882" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#b3b3b3;stroke-width:6;stroke-opacity:1"
+       id="rect3351-4"
+       width="45.714287"
+       height="827.38794"
+       x="845.71429"
+       y="87.484772" />
+    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:#b3b3b3;stroke-width:6;stroke-opacity:1"
+       id="rect3353-4"
+       width="40.406101"
+       height="161.6244"
+       x="848.52814"
+       y="129.08279" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-769.73621"
+       y="-28.501005"
+       id="text3365-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3367-8"
+         x="-769.73621"
+         y="-28.501005"
+         style="font-size:60px;fill:#ffffff">Recipe Box</tspan></text>
+    <flowRoot
+       transform="translate(0,2.5724409e-5)"
+       xml:space="preserve"
+       id="flowRoot3369-6"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion3371-7"><rect
+           id="rect3373-5"
+           width="1161.6754"
+           height="40.406101"
+           x="-276.7818"
+           y="15.945694" /></flowRegion><flowPara
+         id="flowPara3375-0" /></flowRoot>    <rect
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:#800000;stroke-width:6;stroke-opacity:1"
+       id="rect3381-2"
+       width="1187.9393"
+       height="42.426407"
+       x="-315.1676"
+       y="13.925418" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-288.90363"
+       y="48.270603"
+       id="text3377-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3379-4"
+         x="-288.90363"
+         y="48.270603">SearchBar</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-787.91901"
+       y="951.34698"
+       id="text3383-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3385-7"
+         x="-787.91901"
+         y="951.34698">Footer</tspan></text>
+    <rect
+       y="-96.209198"
+       x="974.1745"
+       height="1057.1428"
+       width="1700"
+       id="rect3393-3"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#e6e6e6;stroke-width:6;stroke-opacity:1" />
+    <rect
+       y="-99.066338"
+       x="974.17462"
+       height="185.71428"
+       width="1700"
+       id="rect3395-5"
+       style="opacity:1;fill:#aa0000;fill-opacity:1;stroke:none;stroke-width:6;stroke-opacity:1" />
+    <rect
+       y="920.93372"
+       x="974.1745"
+       height="40"
+       width="1697.1428"
+       id="rect3397-2"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:6;stroke-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3409-3"
+       y="46.250278"
+       x="1016.2134"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="46.250278"
+         x="1016.2134"
+         id="tspan3411-8"
+         sodipodi:role="line">Home</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3413-9"
+       y="46.250309"
+       x="1185.9193"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="46.250309"
+         x="1185.9193"
+         id="tspan3415-8"
+         sodipodi:role="line">Add Recipe</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3417-5"
+       y="-28.501005"
+       x="1010.1526"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:60px;fill:#ffffff"
+         y="-28.501005"
+         x="1010.1526"
+         id="tspan3419-2"
+         sodipodi:role="line">Recipe Box</tspan></text>
+    <rect
+       y="13.925418"
+       x="1464.7213"
+       height="42.426407"
+       width="1187.9393"
+       id="rect3421-3"
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:#800000;stroke-width:6;stroke-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3423-7"
+       y="48.270603"
+       x="1490.9852"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="48.270603"
+         x="1490.9852"
+         id="tspan3425-9"
+         sodipodi:role="line">Search (maybe)</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-opacity:1"
+       id="rect3461-5"
+       width="1695.036"
+       height="826.30475"
+       x="973.78693"
+       y="88.676666" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#800000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-747.51288"
+       y="-8.2979612"
+       id="text3786"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3788"
+         x="-747.51288"
+         y="-8.2979612">Header</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#008000;stroke-width:3;stroke-opacity:1"
+       id="rect3790"
+       width="1699.0765"
+       height="832.36566"
+       x="-810.14233"
+       y="90.696991" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:45px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#008000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-733.37073"
+       y="159.38736"
+       id="text3792"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3794"
+         x="-733.37073"
+         y="159.38736">RecipeListContainer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#d4aa00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-717.20831"
+       y="282.62598"
+       id="text3796"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3798"
+         x="-717.20831"
+         y="282.62598">RecipeLink</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#0066ff;stroke-width:3;stroke-opacity:1"
+       id="rect3800"
+       width="351.53308"
+       height="595.98999"
+       x="1020.2541"
+       y="296.7681" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1056.6196"
+       y="381.62091"
+       id="text3802"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3804"
+         x="1056.6196"
+         y="381.62091">Ingredients</tspan><tspan
+         sodipodi:role="line"
+         x="1056.6196"
+         y="425.37091"
+         id="tspan3820">Component</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#6600ff;stroke-width:3;stroke-opacity:1"
+       id="rect3806"
+       width="1153.5942"
+       height="583.86816"
+       x="1432.3962"
+       y="302.82901" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#6600ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1466.7415"
+       y="383.64124"
+       id="text3808"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3810"
+         x="1466.7415"
+         y="383.64124">MethodComponent</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ff00ff;stroke-width:8;stroke-opacity:1"
+       id="rect3812"
+       width="1690.9954"
+       height="820.24384"
+       x="975.80737"
+       y="92.717293" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1046.5181"
+       y="177.5701"
+       id="text3814"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3816"
+         x="1046.5181"
+         y="177.5701">RecipeCard</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3822"
+       y="953.36731"
+       x="1006.1119"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="953.36731"
+         x="1006.1119"
+         id="tspan3824"
+         sodipodi:role="line">Footer</tspan></text>
+  </g>
+</svg>

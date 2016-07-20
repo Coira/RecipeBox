@@ -1,15 +1,14 @@
 import React from 'react';
 
-const RecipeLink = ({name, prepTime, cookTime, serves, tags, link}) => (
-    <div className = "recipeLink">{name}</div>
+const RecipeLink = ({name, prepTime, cookTime, serves, link}) => (
+    <div className = "recipeLink panel">{name}</div>
 );
 
 RecipeLink.propTypes = {
     name: React.PropTypes.string.isRequired,
-    prepTime: React.PropTypes.string.isRequired,
+    prepTime: React.PropTypes.string,
     cookTime: React.PropTypes.string,
     serves: React.PropTypes.number,
-    tags: React.PropTypes.array.isRequired,
     link: React.PropTypes.string.isRequired
 };
 

@@ -1,21 +1,19 @@
 @import './styles/app';
 @import './styles/titlebar';
-@import './styles/sidebar';
-@import './styles/recipesContainer';
-@import './styles/tag';
-@import './styles/tagsContainer';
+@import './styles/recipeLinkContainer';
 @import './styles/recipeLink';
-@import './styles/recipe';
+@import './styles/recipeCard';
 
+/*
 
-.row {
+.flex_row {
     display: flex;
     flex-direction: row;
     height: 100%;
 }
 
-.column {
+.flex_column {
     display: flex;
     flex-direction: column;
 }
-
+*/

@@ -1,9 +1,9 @@
 import React from 'react';
 import RecipeLink from './RecipeLink';
 
-const RecipesContainer = ({recipes}) => {
+const RecipeLinkContainer = ({recipes}) => {
     return (
-	<div className="recipesContainer">Recipes
+	<div id="recipeLinkContainer">
 	    {
 		recipes.map((recipe) => {
 		    //const recipe = record.recipe;
@@ -15,7 +15,6 @@ const RecipesContainer = ({recipes}) => {
 			    prepTime={recipe.prep_time}
 			    cookTime={recipe.cook_time}
 			    serves={recipe.serves}
-			    tags={recipe.tags}
 			    link='#'/>
 		    )
 		})	   
@@ -24,8 +23,8 @@ const RecipesContainer = ({recipes}) => {
     );
 };
 
-RecipesContainer.propTypes = {
+RecipeLinkContainer.propTypes = {
     recipes: React.PropTypes.array.isRequired
 };
 
-export default RecipesContainer;
+export default RecipeLinkContainer;
