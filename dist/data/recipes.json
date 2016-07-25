@@ -8,7 +8,6 @@
 			"prep_time": "less than 30 mins",
 			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
-			"serves": 2,
 			"img": "food-eggs.jpg",
 			"tags": ["healthy", "vegetarian", "quick", "dinner"],
 			"reference": "",
@@ -71,7 +70,6 @@
 		{
 			"id": 3,
 			"name": "Garlic mushroom frittata",
-			"prep_time": "less than 30 mins",
 			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
 			"serves": 3,
@@ -104,7 +102,6 @@
 			"id": 4,
 			"name": "Garlic mushroom frittata",
 			"prep_time": "less than 30 mins",
-			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
 			"serves": 5,
 			"tags": ["healthy", "vegetarian", "quick", "dinner"],

@@ -7,17 +7,20 @@ const RecipeLink = ({name, prepTime, cookTime, serves, img, link}) => (
 
 	<div className="foodInfo">
 	    <div className="foodImg">
-		<img src={imgUrl+img} height="150"
+		<img src={imgUrl + (img ? img : "generic.jpeg")} height="150"
 		     width="150" alt="food_pic"></img>
 	    </div>
 	    <div className="text flexCol">
 		<div className="top">
 		    <div className="title">{name}</div>
-		    <div className="serves">Serves: {serves}</div>
+		    <div className="serves">
+			{serves ? "Serves: " + serves : ""}</div>
 		</div>
 		<div className="bottom">
-		    <div className="prepTime">Prep Time: {prepTime}</div>
-		    <div className="cookTime">Cook Time: {cookTime}</div>
+		    <div className="prepTime">
+			{prepTime ? "Prep Time: " + prepTime : ""}</div>
+		    <div className="cookTime">
+			{cookTime ? "Cook Time: " + cookTime : ""}</div>
 		</div>
 	    </div>
 	</div>
