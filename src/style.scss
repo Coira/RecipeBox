@@ -6,5 +6,19 @@
 @import './styles/footer';
 
 body {
-	width: 100%;
+    width: 100%;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;	
+}
+
+.flexCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.border {
+    border: 1px solid black;
 }

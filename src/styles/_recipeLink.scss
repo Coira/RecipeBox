@@ -1,9 +1,54 @@
 .recipeLink {
-   /* box-shadow: -8px 9px 15px -11px rgba(0,0,0,0.75);	
-    background-color: #f6f6f6;*/
     margin: 5px;
-    padding: 5px;
-    height: 150px;
-    /*border-radius: 7px;*/
+    height: 180px;
+    width: 99%;
+    background-color: white;
+
+    .foodInfo {
+	display: flex;
+	flex-grow: 1;
+	justify-content: flex-start;
+	align-self: center;
+	height: 150px;
+	
+	.foodImg {
+	    margin: 0 20 0 20;
+	}
+
+	.text {
+	    justify-content: space-between;
+	    font-size: 18px;
+	    margin: -6 0 -6 0;
+	    
+	    .top {
+		.title {
+		    color: black;
+		    font-size: 30px;
+		    margin-left: -3px;
+		   
+		}
+
+	    }
+	    
+	    .bottom {
+	    }
+	}
+    }
+    .iconCont {
+	align-items: flex-end;
+	
+	.icon {
+	    width: 50px;
+	    height: 50px;
+	    border: 1px solid red;
+	    margin: 0 15 15 0;
+	}
+    }
 }
+
+
+
+
+
+
 

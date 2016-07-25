@@ -1,6 +1,7 @@
 import React from 'react';
 import RecipeLink from './RecipeLink';
 
+
 const RecipeLinkContainer = ({recipes}) => {
     return (
 	<div id="recipeLinkContainer">
@@ -15,6 +16,7 @@ const RecipeLinkContainer = ({recipes}) => {
 			    prepTime={recipe.prep_time}
 			    cookTime={recipe.cook_time}
 			    serves={recipe.serves}
+			    img={recipe.img}
 			    link='#'/>
 		    )
 		})	   

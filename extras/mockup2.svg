@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="924.81745"
-     inkscape:cy="759.16975"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="86.492629"
+     inkscape:cy="-449.10101"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -432,6 +432,119 @@
          y="305.79474"
          id="tspan3546"
          style="font-size:25px">Cook Time: 15 minutes</tspan></text>
+    <rect
+       style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:6.00000048;stroke-opacity:1"
+       id="rect3345-3"
+       width="1574.2858"
+       height="146.49165"
+       x="-785.12256"
+       y="1154.8829" />
+    <rect
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#800000;stroke-width:6;stroke-opacity:1"
+       id="rect3387-8"
+       width="155.56349"
+       height="141.42137"
+       x="-756.60425"
+       y="1177.6211" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-571.14728"
+       y="1205.5792"
+       id="text3389-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3391-0"
+         x="-571.14728"
+         y="1205.5792">Recipe Title</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-569.52161"
+       y="1291.2924"
+       id="text3542-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3544-1"
+         x="-569.52161"
+         y="1291.2924"
+         style="font-size:25px">Prep Time: 30 minutes</tspan><tspan
+         sodipodi:role="line"
+         x="-569.52161"
+         y="1322.5424"
+         id="tspan3546-0"
+         style="font-size:25px">Cook Time: 15 minutes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-568.71582"
+       y="1239.2404"
+       id="text3534"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3536"
+         x="-568.71582"
+         y="1239.2404"
+         style="font-size:25px">Serves: 2</tspan></text>
+    <g
+       id="g3545"
+       transform="translate(-300.0153,83.842661)">
+      <rect
+         y="1167.5197"
+         x="981.86829"
+         height="72.73098"
+         width="84.852814"
+         id="rect3539"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3541"
+         y="1217.0171"
+         x="1012.1729"
+         style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="1217.0171"
+           x="1012.1729"
+           id="tspan3543"
+           sodipodi:role="line">D</tspan></text>
+    </g>
+    <g
+       id="g3561"
+       transform="translate(-384.86812,21.213204)">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-opacity:1"
+         id="rect3552"
+         width="84.852814"
+         height="72.73098"
+         x="958.63477"
+         y="1230.1492" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="988.93939"
+         y="1279.6466"
+         id="text3554"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3556"
+           x="988.93939"
+           y="1279.6466">E</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:35px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="845.49768"
+       y="1288.7379"
+       id="text3566"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3568"
+         x="845.49768"
+         y="1288.7379">Delete &amp; Edit buttons</tspan><tspan
+         sodipodi:role="line"
+         x="845.49768"
+         y="1332.4879"
+         id="tspan3570">Use icon img</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"

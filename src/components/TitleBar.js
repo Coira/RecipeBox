@@ -19,25 +19,19 @@ class TitleBar extends React.Component {
     }
 
     handleScroll() {
-	//console.log(window.pageYOffset);
 	this.setState({fixHeader: window.pageYOffset > 59});
     }
     
 	    
     render() {
 	return (
-	    <div id="titleBar" className="container">
-		<div className="row">
-		    <div className="title">Recipe Box</div>
-		</div>
+	    <div id="titleBar" className="flexCol">
+		<div className="title">Recipe Box</div>
+		
 		<div className={classnames({"fixedHeader": this.state.fixHeader},
-					   {"container": this.state.fixHeader},
-					   {"row": !this.state.fixHeader},
-					   "test")}>
-		    <div className={classnames({"row": this.state.fixHeader})}>
-			<div className="col-md-1 link">Home</div>
-			<div className="col-md-1 link">Add Recipe</div>
-		    </div>
+					   "flexRow")}>
+		    <div className="link">Home</div>
+		    <div className="link">Add Recipe</div>
 		</div>
 
 	    </div>
