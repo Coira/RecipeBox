@@ -5,6 +5,7 @@
 		{
 			"id": 1,
 			"name": "Garlic mushroom frittata",
+			"url": "garlic-mushroom-frittata",
 			"prep_time": "less than 30 mins",
 			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
@@ -36,6 +37,7 @@
 		{
 			"id": 2,
 			"name": "Chicken in a creamy mushroom sauce",
+			"url": "chicken_in_a_creamy_mushroom_sauce",
 			"prep_time": "less than 30 mins",
 			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
@@ -70,6 +72,7 @@
 		{
 			"id": 3,
 			"name": "Garlic mushroom frittata",
+			"url": "garlic-mushroom-frittata-2",
 			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
 			"serves": 3,
@@ -101,6 +104,7 @@
 				{
 			"id": 4,
 			"name": "Garlic mushroom frittata",
+			"url": "garlic-mushroom-frittata-3",
 			"prep_time": "less than 30 mins",
 			"oven_temp": "",
 			"serves": 5,
@@ -127,163 +131,6 @@
 						"Combine the salad ingredients in a bowl.",
 						"Remove from the grill and loosen the sides of the frittata with a round-bladed knife.Turn out onto a board and cut into wedges. Serve hot or cold with the salad."]
 			}
-		},
-				{
-			"id": 5,
-			"name": "Garlic mushroom frittata",
-			"prep_time": "less than 30 mins",
-			"cook_time": "10 to 30 mins",
-			"oven_temp": "",
-			"serves": 2,
-			"tags": ["healthy", "vegetarian", "quick", "dinner"],
-			"reference": "",
-			"notes": "",
-			"ingredients": {
-				"main":	["cooking spray",
-						"250g/90z chestnut mushrooms, sliced",
-						"1 small garlic clove, crushed",
-						"1 tbsp thinly sliced fresh chives",
-						"4 large free-range eggs, beaten",
-						"freshly ground black pepper"],
-				"For the Salad": ["1 Little Gem lettuce, leaves separated",
-								  "100g/3 1/2oz cherry tomatoes, halved",
-								  "1/3 cucumber, cut into chunks"]
-			},
-			"method": {
-					"main": [
-						"Spray a small, flame-proof frying pan with oil and place over a high heat. (The base of the pan shouldn’t be wider than about 18cm/7in.) Stir-fry the mushrooms in three batches for 2-3 minutes, or until softened and lightly browned. Tip the cooked mushrooms into a sieve over a bowl to catch any juices – you don’t want the mushrooms to become soggy",
-						"Return all the mushrooms to the pan and stir in the garlic and chives, and a pinch of ground black pepper. Cook for a further minute, then reduce the heat to low. ",
-						"Preheat the grill to its hottest setting. Pour the eggs over the mushrooms. Cook for five minutes, or until almost set.",
-						"Place the pan under the grill for 3-4 minutes, or until set.",
-						"Combine the salad ingredients in a bowl.",
-						"Remove from the grill and loosen the sides of the frittata with a round-bladed knife.Turn out onto a board and cut into wedges. Serve hot or cold with the salad."]
-			}
-		},
-						{
-			"id": 6,
-			"name": "Garlic mushroom frittata",
-			"prep_time": "less than 30 mins",
-			"cook_time": "10 to 30 mins",
-			"oven_temp": "",
-			"serves": 5,
-			"tags": ["healthy", "vegetarian", "quick", "dinner"],
-			"reference": "",
-			"notes": "",
-			"ingredients": {
-				"main":	["cooking spray",
-						"250g/90z chestnut mushrooms, sliced",
-						"1 small garlic clove, crushed",
-						"1 tbsp thinly sliced fresh chives",
-						"4 large free-range eggs, beaten",
-						"freshly ground black pepper"],
-				"For the Salad": ["1 Little Gem lettuce, leaves separated",
-								  "100g/3 1/2oz cherry tomatoes, halved",
-								  "1/3 cucumber, cut into chunks"]
-			},
-			"method": {
-					"main": [
-						"Spray a small, flame-proof frying pan with oil and place over a high heat. (The base of the pan shouldn’t be wider than about 18cm/7in.) Stir-fry the mushrooms in three batches for 2-3 minutes, or until softened and lightly browned. Tip the cooked mushrooms into a sieve over a bowl to catch any juices – you don’t want the mushrooms to become soggy",
-						"Return all the mushrooms to the pan and stir in the garlic and chives, and a pinch of ground black pepper. Cook for a further minute, then reduce the heat to low. ",
-						"Preheat the grill to its hottest setting. Pour the eggs over the mushrooms. Cook for five minutes, or until almost set.",
-						"Place the pan under the grill for 3-4 minutes, or until set.",
-						"Combine the salad ingredients in a bowl.",
-						"Remove from the grill and loosen the sides of the frittata with a round-bladed knife.Turn out onto a board and cut into wedges. Serve hot or cold with the salad."]
-			}
-		},
-						{
-			"id": 7,
-			"name": "Garlic mushroom frittata",
-			"prep_time": "less than 30 mins",
-			"cook_time": "10 to 30 mins",
-			"oven_temp": "",
-			"serves": 5,
-			"tags": ["healthy", "vegetarian", "quick", "dinner"],
-			"reference": "",
-			"notes": "",
-			"ingredients": {
-				"main":	["cooking spray",
-						"250g/90z chestnut mushrooms, sliced",
-						"1 small garlic clove, crushed",
-						"1 tbsp thinly sliced fresh chives",
-						"4 large free-range eggs, beaten",
-						"freshly ground black pepper"],
-				"For the Salad": ["1 Little Gem lettuce, leaves separated",
-								  "100g/3 1/2oz cherry tomatoes, halved",
-								  "1/3 cucumber, cut into chunks"]
-			},
-			"method": {
-					"main": [
-						"Spray a small, flame-proof frying pan with oil and place over a high heat. (The base of the pan shouldn’t be wider than about 18cm/7in.) Stir-fry the mushrooms in three batches for 2-3 minutes, or until softened and lightly browned. Tip the cooked mushrooms into a sieve over a bowl to catch any juices – you don’t want the mushrooms to become soggy",
-						"Return all the mushrooms to the pan and stir in the garlic and chives, and a pinch of ground black pepper. Cook for a further minute, then reduce the heat to low. ",
-						"Preheat the grill to its hottest setting. Pour the eggs over the mushrooms. Cook for five minutes, or until almost set.",
-						"Place the pan under the grill for 3-4 minutes, or until set.",
-						"Combine the salad ingredients in a bowl.",
-						"Remove from the grill and loosen the sides of the frittata with a round-bladed knife.Turn out onto a board and cut into wedges. Serve hot or cold with the salad."]
-			}
-		},
-						{
-			"id": 8,
-			"name": "Garlic mushroom frittata",
-			"prep_time": "less than 30 mins",
-			"cook_time": "10 to 30 mins",
-			"oven_temp": "",
-			"serves": 5,
-			"tags": ["healthy", "vegetarian", "quick", "dinner"],
-			"reference": "",
-			"notes": "",
-			"ingredients": {
-				"main":	["cooking spray",
-						"250g/90z chestnut mushrooms, sliced",
-						"1 small garlic clove, crushed",
-						"1 tbsp thinly sliced fresh chives",
-						"4 large free-range eggs, beaten",
-						"freshly ground black pepper"],
-				"For the Salad": ["1 Little Gem lettuce, leaves separated",
-								  "100g/3 1/2oz cherry tomatoes, halved",
-								  "1/3 cucumber, cut into chunks"]
-			},
-			"method": {
-					"main": [
-						"Spray a small, flame-proof frying pan with oil and place over a high heat. (The base of the pan shouldn’t be wider than about 18cm/7in.) Stir-fry the mushrooms in three batches for 2-3 minutes, or until softened and lightly browned. Tip the cooked mushrooms into a sieve over a bowl to catch any juices – you don’t want the mushrooms to become soggy",
-						"Return all the mushrooms to the pan and stir in the garlic and chives, and a pinch of ground black pepper. Cook for a further minute, then reduce the heat to low. ",
-						"Preheat the grill to its hottest setting. Pour the eggs over the mushrooms. Cook for five minutes, or until almost set.",
-						"Place the pan under the grill for 3-4 minutes, or until set.",
-						"Combine the salad ingredients in a bowl.",
-						"Remove from the grill and loosen the sides of the frittata with a round-bladed knife.Turn out onto a board and cut into wedges. Serve hot or cold with the salad."]
-			}
-		},
-						{
-			"id": 9,
-			"name": "Garlic mushroom frittata",
-			"prep_time": "less than 30 mins",
-			"cook_time": "10 to 30 mins",
-			"oven_temp": "",
-			"serves": 5,
-			"tags": ["healthy", "vegetarian", "quick", "dinner"],
-			"reference": "",
-			"notes": "",
-			"ingredients": {
-				"main":	["cooking spray",
-						"250g/90z chestnut mushrooms, sliced",
-						"1 small garlic clove, crushed",
-						"1 tbsp thinly sliced fresh chives",
-						"4 large free-range eggs, beaten",
-						"freshly ground black pepper"],
-				"For the Salad": ["1 Little Gem lettuce, leaves separated",
-								  "100g/3 1/2oz cherry tomatoes, halved",
-								  "1/3 cucumber, cut into chunks"]
-			},
-			"method": {
-					"main": [
-						"Spray a small, flame-proof frying pan with oil and place over a high heat. (The base of the pan shouldn’t be wider than about 18cm/7in.) Stir-fry the mushrooms in three batches for 2-3 minutes, or until softened and lightly browned. Tip the cooked mushrooms into a sieve over a bowl to catch any juices – you don’t want the mushrooms to become soggy",
-						"Return all the mushrooms to the pan and stir in the garlic and chives, and a pinch of ground black pepper. Cook for a further minute, then reduce the heat to low. ",
-						"Preheat the grill to its hottest setting. Pour the eggs over the mushrooms. Cook for five minutes, or until almost set.",
-						"Place the pan under the grill for 3-4 minutes, or until set.",
-						"Combine the salad ingredients in a bowl.",
-						"Remove from the grill and loosen the sides of the frittata with a round-bladed knife.Turn out onto a board and cut into wedges. Serve hot or cold with the salad."]
-			}
-		}
-		
-		
+		}		
 	]
 }

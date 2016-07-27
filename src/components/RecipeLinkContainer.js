@@ -17,7 +17,7 @@ const RecipeLinkContainer = ({recipes}) => {
 			    cookTime={recipe.cook_time}
 			    serves={recipe.serves}
 			    img={recipe.img}
-			    link='#'/>
+			    link={recipe.url}/>
 		    )
 		})	   
 	    }

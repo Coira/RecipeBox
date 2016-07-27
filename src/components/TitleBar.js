@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import {Button, Modal} from 'react-bootstrap';
+import {Link} from 'react-router';
 
 class TitleBar extends React.Component {
     constructor(props) {
@@ -55,10 +56,14 @@ class TitleBar extends React.Component {
 		<div id="titleBar" className="flexCol">
 		    <div className="title">Recipe Box</div>
 		    
-		    <div className={classnames({"fixedHeader": this.state.fixHeader},
-					       "flexRow")}>
+		    <div className=
+			 {classnames({"fixedHeader": this.state.fixHeader},
+				     "flexRow")}>
 			<div className="link" onClick={this.onHome}>Home</div>
-			<div className="link" onClick={this.onAdd}>Add Recipe</div>
+			<div className="link"
+			     onClick={this.onAdd}>Add Recipe</div>
+			<Link to="/route1">Route1</Link>
+			<Link to="/route2">Route2</Link>
 		    </div>
 
 		</div>
@@ -74,6 +79,7 @@ class TitleBar extends React.Component {
 			<Button onClick={this.close}>Close</Button>
 		    </Modal.Footer>
 		</Modal>
+
 	    </div>
 	)
     }

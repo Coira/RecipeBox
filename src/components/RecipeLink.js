@@ -1,9 +1,11 @@
 import React from 'react';
+import NavLink from './NavLink';
 
 const imgUrl = "/imgs/";
 
 const RecipeLink = ({name, prepTime, cookTime, serves, img, link}) => (
-    <div className = "recipeLink flexRow">
+    <NavLink to={"/"+link}>
+	<div className = "recipeLink flexRow">
 
 	<div className="foodInfo">
 	    <div className="foodImg">
@@ -30,7 +32,8 @@ const RecipeLink = ({name, prepTime, cookTime, serves, img, link}) => (
 	    <div className="icon">D</div>
 	</div>
 
-    </div>
+	</div>
+    </NavLink>
 );
 
 RecipeLink.propTypes = {
