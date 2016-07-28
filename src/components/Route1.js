@@ -1,7 +1,0 @@
-import React from 'react';
-
-const Route1 = () => (
-    <div> Route1 </div>
-);
-
-export default Route1;

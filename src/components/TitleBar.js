@@ -62,8 +62,6 @@ class TitleBar extends React.Component {
 			<div className="link" onClick={this.onHome}>Home</div>
 			<div className="link"
 			     onClick={this.onAdd}>Add Recipe</div>
-			<Link to="/route1">Route1</Link>
-			<Link to="/route2">Route2</Link>
 		    </div>
 
 		</div>
