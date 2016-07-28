@@ -6,28 +6,16 @@ import {Link} from 'react-router';
 class TitleBar extends React.Component {
     constructor(props) {
 	super(props);
-	this.state = {
-	    fixHeader: false,
-	    showModal: false
-	}
 
 	this.onHome = this.onHome.bind(this);
 	this.onAdd = this.onAdd.bind(this);
 	this.addRecipe = this.addRecipe.bind(this);
 	this.close = this.close.bind(this);
-	
-    }
 
-    componentDidMount() {
-	window.addEventListener("scroll", this.handleScroll.bind(this));
-    }
+	this.state = {
+	    showModal: false
+	}
 
-    componentWillUnmount() {
-	window.removeEventListener("scroll", this.handleScroll.bind(this));
-    }
-
-    handleScroll() {
-	this.setState({fixHeader: window.pageYOffset > 59});
     }
 
     onHome() {
@@ -57,7 +45,7 @@ class TitleBar extends React.Component {
 		    <div className="title">Recipe Box</div>
 		    
 		    <div className=
-			 {classnames({"fixedHeader": this.state.fixHeader},
+			 {classnames({"fixedHeader": this.props.fixHeader},
 				     "flexRow")}>
 			<div className="link" onClick={this.onHome}>Home</div>
 			<div className="link"
@@ -66,7 +54,8 @@ class TitleBar extends React.Component {
 
 		</div>
 
-		<Modal show={this.state.showModal} onHide={this.addRecipe}>
+		<Modal className="addRecipeModal"
+		       show={this.state.showModal} onHide={this.addRecipe}>
 		    <Modal.Header closeButton>
 			<Modal.Title> Add Recipe </Modal.Title>
 		    </Modal.Header>

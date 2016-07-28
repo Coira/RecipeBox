@@ -4,7 +4,7 @@ import NavLink from './NavLink';
 const imgUrl = "/imgs/";
 
 const RecipeLink = ({name, prepTime, cookTime, serves, img, link}) => (
-    <NavLink to={"/recipes/"+link}>
+    <NavLink to={"/"+link}>
 	<div className = "recipeLink flexRow">
 
 	<div className="foodInfo">

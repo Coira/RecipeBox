@@ -1,7 +1,10 @@
 import React from 'react';
 
+
+    
 const Recipe = () => (
-    <div> Bread, butter, ham, cheese, done </div>
+    <div className="recipeCard">hi</div>
 );
+
 
 export default Recipe;
