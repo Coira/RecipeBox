@@ -1,17 +1,21 @@
 import React from 'react';
 import RecipeLink from './RecipeLink';
 
+const recipesDefault = [];
 
 const RecipeLinkContainer = ({recipes}) => {
+
+    recipes = recipes || recipesDefault;
+
     return (
 	<div id="recipeLinkContainer">
 	    {
-		recipes.map((recipe) => {
-		    //const recipe = record.recipe;
+		recipes.map((recipe, k) => {
 
 		    return (
 			<RecipeLink
 			    key={recipe.id}
+			    index={k}
 			    name={recipe.name}
 			    prepTime={recipe.prep_time}
 			    cookTime={recipe.cook_time}
@@ -23,10 +27,14 @@ const RecipeLinkContainer = ({recipes}) => {
 	    }
 	</div>
     );
+    
 };
 
+
+/*
 RecipeLinkContainer.propTypes = {
     recipes: React.PropTypes.array.isRequired
 };
+*/
 
 export default RecipeLinkContainer;

@@ -1,6 +1,5 @@
 import React from 'react';
 import Titlebar from './TitleBar';
-//import RecipeLinkContainer from './RecipeLinkContainer';
 import Footer from './Footer';
 
 
@@ -8,17 +7,16 @@ class App extends React.Component {
     constructor(props) {
 	super(props);
 
-	this.state = {
-	    recipes: [],
-	    fixHeader: false
-	}
+	this.actions = this.props.actions;	
     }
 
     componentDidMount() {
 
 	//TODO replace this with local storage
 	$.getJSON("/data/recipes.json", (data) => {
-	    this.setState({recipes: data.recipes});
+	    data.recipes.map((recipe) => {
+		this.actions.addRecipe(recipe);
+	    })
 	});
 	
 	window.addEventListener("scroll", this.handleScroll.bind(this));
@@ -29,27 +27,24 @@ class App extends React.Component {
     }
 
     handleScroll() {
-	this.setState({fixHeader: window.pageYOffset > 59});
+	this.actions.fixHeader(window.pageYOffset > 59);
     }
     
     render() {
-	
-	var children = React.Children.map(this.props.children, function(child) {
-	    return React.cloneElement(child, {
-		recipes: this.state.recipes
-	    })
-	}.bind(this))
-	    
 
 	return  (
 	    <div>
-		<Titlebar fixHeader={this.state.fixHeader}/>
-		{children}
+		<Titlebar fixHeader={this.props.fixHeader}
+			  setShowRecipeModal={this.actions.setShowRecipeModal}
+			  showRecipeModal={this.props.showRecipeModal}/>
+		{this.props.children}
+		<Footer />
 	    </div>
 	);
+	
     }
 }
 
 export default App;
 
-	
+

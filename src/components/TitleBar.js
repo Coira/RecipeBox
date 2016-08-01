@@ -6,15 +6,11 @@ import {Link} from 'react-router';
 class TitleBar extends React.Component {
     constructor(props) {
 	super(props);
-
+	
 	this.onHome = this.onHome.bind(this);
 	this.onAdd = this.onAdd.bind(this);
 	this.addRecipe = this.addRecipe.bind(this);
 	this.close = this.close.bind(this);
-
-	this.state = {
-	    showModal: false
-	}
 
     }
 
@@ -23,18 +19,19 @@ class TitleBar extends React.Component {
 	return (<div> Hello! </div>);
     }
 
+    // user clicks on 'add recipe' in recipe modal
     onAdd() {
-	this.setState({showModal: true});
+	this.props.setShowRecipeModal(true);
     }
 
+    // display recipe modal
     addRecipe() {
-	console.log("add recipe");
-	this.setState({showModal: false});
+	this.props.setShowRecipeModal(false);
     }
 
+    // close modal -- cancel and delete recipe input?
     close() {
-	console.log("close modal");
-	this.setState({showModal: false});
+	this.props.setShowRecipeModal(false);
     }
     
     
@@ -55,7 +52,8 @@ class TitleBar extends React.Component {
 		</div>
 
 		<Modal className="addRecipeModal"
-		       show={this.state.showModal} onHide={this.addRecipe}>
+		       show={this.props.showRecipeModal}
+		       onHide={this.addRecipe}>
 		    <Modal.Header closeButton>
 			<Modal.Title> Add Recipe </Modal.Title>
 		    </Modal.Header>
