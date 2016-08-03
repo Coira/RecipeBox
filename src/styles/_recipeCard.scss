@@ -1,14 +1,58 @@
-.recipe {
-    border: 1px solid black;
-    background-color: #efefef;
+.recipeCont {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    line-height: 23px;
+    
+    .recipe {
+	padding: 10px;
+	border-radius: 5px;
+	
+	.titleItems {
+	    font-weight: normal;
+	    font-size: 40px;
+	    display: flex;
+	    align-self: flex-start;
+	    padding-bottom: 8px;
+	    border-bottom: 5px solid #00869e;
+	    margin-bottom: 10px;
+	    width: 100%;
+	    
+	    img {
+		margin-right: 5px;
+	    }
+	    
+	    .recipeTitle {
+		align-self: center
+	    }
+	    
+	}
+
+	
+	.contents {
+	    height: 100%;
+	    font-size: 18px;
+	    max-width: 1200px;
+	    
+	    .ingredientsPanel {
+		margin: 0 10 0 0;
+		width: 500px;
+
+		.ingCat {
+		    margin: 10 0 0 0;
+		}
+	    }
+
+	    .methodPanel {
+		.methCat {
+		    margin: 10 0 0 0;
+		}
+		
+	    }
+	}
+
+    }
+    
 }
-
-.recipeTitle {
-}
-
-.ingredientsPanel {
-    border: 1px solid black;
-}
-
-
-			      

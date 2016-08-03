@@ -1,58 +1,74 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+const imgUrl = "/imgs/";
+
+// Makes every word start with a capital letter
+function titlise(title) {
+    return (title.split(" ").map((word) =>
+	(word.charAt(0).toUpperCase() + word.substr(1))).join(" "));
+}
+
 const Recipe = (props) => {
     if (props.recipe) {
 	const recipe = props.recipe;
-	
+	const img = imgUrl + (recipe.img ? recipe.img : "generic.jpeg");
 	const ingredientCategories = Object.keys(recipe.ingredients);
 	const methodCategories = Object.keys(recipe.method);
 
-	return (
-	    <div>
-		<div className="recipeTitle">{recipe.name}</div>
-		
-		<div className="ingredientsPanel">
-		    {
-			ingredientCategories.map((category, key) => {
-			    return (
-				<div className="ingCat" key={"icat" + key}>
-				    {category} 
-				    {
-					
-					recipe.ingredients[category].
-					       map((item, key) => {
-						   return (<div className="item"
-								key={"ing" + key}>{item}</div>)
-					       })
-				    }
-				</div>
-			    )}
-			)
-			    
-		    }	
-		</div>
 
-		<div className="methodPanel">
-		    {
-			methodCategories.map((category, key) => {
-			    return (
-				<div className="methCat" key={"mcat"+key}>
-				    {category}
-				    {
-					recipe.method[category].
-					       map((instruction, key) => {
-						   return (<div className="instruction"
-								key={"inst" + key}>{instruction}</div>)
-					       })
-					    
-				    }
-				</div>
-			    )}
-			)
-		    }
+	return (
+	    <div className="recipeCont">
+		<div className="recipe flexCol">
+		    
+		    <div className="titleItems flexRow">
+			<img src={img} alt="food_pic" width="120" height="120" />
+			<div className="recipeTitle">{titlise(recipe.name)}</div>
+		    </div>
+		    
+		    <div className="contents flexRow">
+			<div className="ingredientsPanel">
+			    {
+				ingredientCategories.map((category, key) => {
+				    return (
+					<div className="ingCat" key={"icat" + key}>
+					    {titlise(category)} 
+					    {
+						
+						recipe.ingredients[category].
+						       map((item, key) => {
+							   return (<div className="item"
+									key={"ing" + key}>{item}</div>)
+						       })
+					    }
+					</div>
+				    )}
+				)
+				    
+			    }	
+			</div>
+
+			<div className="methodPanel">
+			    {
+				methodCategories.map((category, key) => {
+				    return (
+					<div className="methCat" key={"mcat"+key}>
+					    {titlise(category)}
+					    {
+						recipe.method[category].
+						       map((instruction, key) => {
+							   return (<div className="instruction"
+									key={"inst" + key}>{instruction}</div>)
+						       })
+						    
+					    }
+					</div>
+				    )}
+				)
+			    }
+			</div>
+		    </div>
 		</div>
-		
 	    </div>
 	)
     }
@@ -76,8 +92,3 @@ const ConnectedRecipeCard = connect(
 )(Recipe);
 
 export default ConnectedRecipeCard;
-
-/*			props.recipe.ingredients.main.map((item, key) => {
-   return (<div key={key}
-   className="item">{item}</div>)
-   })*/
