@@ -26,21 +26,23 @@ const Recipe = (props) => {
 			<div className="recipeTitle">{titlise(recipe.name)}</div>
 		    </div>
 		    
-		    <div className="contents flexRow">
+		    <div className="contents contentsLayout">
 			<div className="ingredientsPanel">
 			    {
 				ingredientCategories.map((category, key) => {
 				    return (
-					<div className="ingCat" key={"icat" + key}>
-					    {titlise(category)} 
+					<div className="category" key={"icat" + key}>
+					    <div className="catTitle"> {titlise(category)} </div>
+					    <ul>
 					    {
 						
 						recipe.ingredients[category].
 						       map((item, key) => {
 							   return (<div className="item"
-									key={"ing" + key}>{item}</div>)
+									key={"ing" + key}><li>{item}</li></div>)
 						       })
 					    }
+					    </ul>
 					</div>
 				    )}
 				)
@@ -52,16 +54,18 @@ const Recipe = (props) => {
 			    {
 				methodCategories.map((category, key) => {
 				    return (
-					<div className="methCat" key={"mcat"+key}>
-					    {titlise(category)}
+					<div className="category" key={"mcat"+key}>
+					    <div className="catTitle"> {titlise(category)} </div>
+					    <ol>
 					    {
 						recipe.method[category].
 						       map((instruction, key) => {
 							   return (<div className="instruction"
-									key={"inst" + key}>{instruction}</div>)
+									key={"inst" + key}><li>{instruction}</li></div>)
 						       })
 						    
 					    }
+					    </ol>
 					</div>
 				    )}
 				)

@@ -43,7 +43,7 @@ class TitleBar extends React.Component {
 		    
 		    <div className=
 			 {classnames({"fixedHeader": this.props.fixHeader},
-				     "flexRow")}>
+				     "titleLinks")}>
 			<div className="link" onClick={this.onHome}>Home</div>
 			<div className="link"
 			     onClick={this.onAdd}>Add Recipe</div>

@@ -1,6 +1,6 @@
 #titleBar {
     background-color: #aee239;
-    height: 100px;
+    height: 130px;
     width: 100%;
     margin-bottom: 8px;
 
@@ -11,9 +11,12 @@
 	font-weight: 900;
 	font-size: 56px;
 
-	color: white;
+	color: #6d39e2;
+	/* color: #e239ae; */
 	margin: 0 0 0 0;
 	align-self: center;
+
+
     }
 
     .fixedHeader {
@@ -22,12 +25,22 @@
 	left: 0;
 	height: 40px;
 	width: 100%;
-	background-color: #aa0000;
+	background-color: #aee239;
     }
 
-    .link {
-	/*margin: 8 15 0 12;*/
-	color: black;
+    .titleLinks {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: #2a2a2a;
+	font-family: 'EB Garamond', serif;
+	font-size: 26px;
+	font-weight: bold;
+	
+	.link {
+
+	    margin: 0 20 0 20;
+	}
     }
 
 }

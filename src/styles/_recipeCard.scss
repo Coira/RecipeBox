@@ -11,48 +11,99 @@
 	border-radius: 5px;
 	
 	.titleItems {
-	    font-weight: normal;
+	    font-weight: bold;
 	    font-size: 40px;
+	    line-height: 40px;
 	    display: flex;
 	    align-self: flex-start;
 	    padding-bottom: 8px;
 	    border-bottom: 5px solid #00869e;
 	    margin-bottom: 10px;
 	    width: 100%;
-	    
+
 	    img {
 		margin-right: 5px;
 	    }
 	    
 	    .recipeTitle {
-		align-self: center
+		align-self: center;
+		overflow: hidden;
+		height: 46px;
 	    }
 	    
 	}
 
-	
 	.contents {
+	    display: flex;
+	    flex-direction: row;
 	    height: 100%;
-	    font-size: 18px;
+	    font-size: 20px;
 	    max-width: 1200px;
+	    min-width: 600px;
+	    
+	    .category {
+		margin: 0 0 20 0;
+	    }
+
 	    
 	    .ingredientsPanel {
 		margin: 0 10 0 0;
 		width: 500px;
-
-		.ingCat {
-		    margin: 10 0 0 0;
-		}
+		min-width: 300px;
+		line-height: 28px;
+		
 	    }
 
+	    .catTitle {
+		margin: 10 0 3 0;
+		font-weight: bold;
+		
+	    }
+	    
 	    .methodPanel {
-		.methCat {
-		    margin: 10 0 0 0;
+		line-height: 26px;
+
+		li {
+		    margin: 0 0 8 0;
 		}
 		
 	    }
+
+
+	    
 	}
 
+	@media (max-width: 700px) {
+
+	    .titleItems {
+		img {
+		    display: none;
+		}
+	    }
+
+	    .contents {
+		text-overflow: clip;
+		margin: 0 0 0 0;
+		
+		flex-direction: column;
+
+		width: auto;
+		min-width: 0;
+
+		li {
+		    margin: 0;
+		}
+		
+		.ingredientsPanel {
+		    margin: 0;
+		    width: auto;
+		    min-width: 0;
+		}
+
+	    }
+
+	}
+	
     }
-    
+       
 }
