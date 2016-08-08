@@ -1,4 +1,4 @@
-export function getRecipe(index) {
+/*export function getRecipe(index) {
     return {
 	type: "GET_RECIPE",
 	index
@@ -9,7 +9,7 @@ export function getRecipes() {
     return {
 	type: "GET_RECIPES"
     }
-}
+}*/
 
 export function addRecipe(recipe) {
     return {

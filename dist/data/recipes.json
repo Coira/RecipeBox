@@ -1,18 +1,13 @@
 {
-	"tags": ["healthy", "vegetarian", "quick", "dinner", "chicken", "untagged"],
 	"last_id": 2,
 	"recipes": [
 		{
 			"id": 1,
 			"name": "Garlic mushroom frittata",
-			"url": "garlic-mushroom-frittata",
 			"prep_time": "less than 30 mins",
 			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
 			"img": "food-eggs.jpg",
-			"tags": ["healthy", "vegetarian", "quick", "dinner"],
-			"reference": "",
-			"notes": "",
 			"ingredients": {
 				"main":	["cooking spray",
 						"250g/90z chestnut mushrooms, sliced",
@@ -37,15 +32,11 @@
 		{
 			"id": 2,
 			"name": "Chicken in a creamy mushroom sauce",
-			"url": "chicken_in_a_creamy_mushroom_sauce",
 			"prep_time": "less than 30 mins",
 			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
 			"serves": 2,
 			"img": "apples-kiwi-oranges-fruit-51335.jpg",
-			"tags": ["chicken", "dinner", "quick"],
-			"reference": "http://www.bbc.co.uk/food/recipes/chicken_in_a_creamy_84614",
-			"notes": "User notes go here. I'm eating a home-made chocolate muffin right now. It is good.",
 			"ingredients": {
 				"main": ["spray olive oil",
 						 "2 chicken breasts, skinless and trimmed (200g/7oz each)",
@@ -72,14 +63,10 @@
 		{
 			"id": 3,
 			"name": "Garlic mushroom frittata + a really long title",
-			"url": "garlic-mushroom-frittata-2",
 			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
 			"serves": 3,
 			"img": "food-colorful-dessert-sweet.jpg",
-			"tags": ["healthy", "vegetarian", "quick", "dinner"],
-			"reference": "",
-			"notes": "",
 			"ingredients": {
 				"main":	["cooking spray",
 						"250g/90z chestnut mushrooms, sliced",
@@ -126,13 +113,9 @@
 				{
 			"id": 4,
 			"name": "Garlic mushroom frittata",
-			"url": "garlic-mushroom-frittata-3",
 			"prep_time": "less than 30 mins",
 			"oven_temp": "",
 			"serves": 5,
-			"tags": ["healthy", "vegetarian", "quick", "dinner"],
-			"reference": "",
-			"notes": "",
 			"ingredients": {
 				"main":	["cooking spray",
 						"250g/90z chestnut mushrooms, sliced",

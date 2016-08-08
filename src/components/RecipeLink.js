@@ -3,8 +3,8 @@ import NavLink from './NavLink';
 
 const imgUrl = "/imgs/";
 
-const RecipeLink = ({name, prepTime, cookTime, serves, img, link, index}) => (
-    <NavLink to={"/recipes/"+index}>
+const RecipeLink = ({name, prepTime, cookTime, serves, img, url}) => (
+    <NavLink to={"/recipes/"+url}>
 	<div className = "recipeLink flexRow">
 
 	<div className="foodInfo">
@@ -42,7 +42,7 @@ RecipeLink.propTypes = {
     prepTime: React.PropTypes.string,
     cookTime: React.PropTypes.string,
     serves: React.PropTypes.number,
-    link: React.PropTypes.string.isRequired
+    url: React.PropTypes.string.isRequired
 };
 
 export default RecipeLink;

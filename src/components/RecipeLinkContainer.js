@@ -10,18 +10,17 @@ const RecipeLinkContainer = ({recipes}) => {
     return (
 	<div id="recipeLinkContainer">
 	    {
-		recipes.map((recipe, k) => {
+		recipes.map((recipe) => {
 
 		    return (
 			<RecipeLink
 			    key={recipe.id}
-			    index={k}
+			    url={recipe.url}
 			    name={recipe.name}
 			    prepTime={recipe.prep_time}
 			    cookTime={recipe.cook_time}
 			    serves={recipe.serves}
-			    img={recipe.img}
-			    link={recipe.url}/>
+			    img={recipe.img}/>
 		    )
 		})	   
 	    }

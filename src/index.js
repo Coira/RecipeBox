@@ -42,7 +42,7 @@ ReactDOM.render(
 	<Router history={browserHistory}>
 	    <Route path="/" component={RecipeBoxApp}>
 		<IndexRoute  component={ConnectedHome}/>
-		<Route path="/recipes/:index"
+		<Route path="/recipes/:url"
 		       component={ConnectedRecipeCard}/>
 	    </Route>
 	</Router>	

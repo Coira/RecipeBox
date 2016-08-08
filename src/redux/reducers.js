@@ -2,26 +2,26 @@ import {Map, List, fromJS} from 'immutable';
 
 //TODO split recipe reducers from other reducers
 
-export default function reducer(state = fromJS({recipes: []}), action) {
+export default function reducer(state = fromJS({recipes: {}}), action) {
 
     let recipes = "";
     
     switch(action.type) {
 	case 'ADD_RECIPE':
-	    //TODO change recipes to Map with url as key
-
 	    recipes = state.get("recipes");
-	    const updatedRecipes = recipes.push(action.recipe);
+	    //const updatedRecipes = recipes.push(action.recipe);
+	    const recipe = action.recipe;
+	    const key = recipe.url
+	    const updatedRecipes = recipes.set(key, recipe);
 	    return state.set("recipes", updatedRecipes);
-	case 'GET_RECIPES':
+	/*case 'GET_RECIPES':
 	    return state.get("recipes");
 	case 'GET_RECIPE':
 	    recipes = state.get("recipes");
 	    const index = Number(action.index);
-	    return recipes.get(index);
+	    return recipes.get(index);*/
 	case 'REMOVE_RECIPE': return state;
 	case 'EDIT_RECIPE': return state;
-
 
 	case 'FIX_HEADER':
 	    // fixes titlebar to top of screen when scrolling

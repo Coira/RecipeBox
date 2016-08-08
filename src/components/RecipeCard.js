@@ -16,7 +16,6 @@ const Recipe = (props) => {
 	const ingredientCategories = Object.keys(recipe.ingredients);
 	const methodCategories = Object.keys(recipe.method);
 
-
 	return (
 	    <div className="recipeCont">
 		<div className="recipe flexCol">
@@ -82,10 +81,10 @@ const Recipe = (props) => {
 }
 
 const mapStateToProps = (state,ownProps) => {
-    const index = Number(ownProps.params.index);
     const recipes = state.get("recipes");
+    const key = ownProps.params.url;
     return {
-	recipe: recipes.get(index)
+	recipe: recipes.get(key)
     }
 
 }
