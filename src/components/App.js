@@ -1,14 +1,17 @@
 import React from 'react';
 import Titlebar from './TitleBar';
+import RecipeModal from './RecipeModal';
 import Footer from './Footer';
-
-
 
 
 class App extends React.Component {
     constructor(props) {
 	super(props);
 
+	this.onAdd = this.onAdd.bind(this);
+	this.addRecipe = this.addRecipe.bind(this);
+	this.close = this.close.bind(this);
+	
 	this.actions = this.props.actions;
 	this.urls = [];
     }
@@ -38,7 +41,7 @@ class App extends React.Component {
 	const urlFromName = name.replace(/[^a-zA-Z0-9 ]/g, "")
 				.split(" ").join("_");
 
-	let offset = 1;
+	let offset = 2;
 	let url = urlFromName;
 
 	// if the url already exists, add a number to the end of it
@@ -51,14 +54,35 @@ class App extends React.Component {
 	this.urls.push(url);
 	return url;
     }
+
+    
+    // display recipe modal
+    addRecipe() {
+	this.actions.setShowRecipeModal(false);
+    }
+
+    // user clicks on 'add recipe' in recipe modal
+    onAdd() {
+	console.log("onAdd");
+	this.actions.setShowRecipeModal(true);
+    }
+
+
+    // close modal -- cancel and delete recipe input?
+    close() {
+	this.actions.setShowRecipeModal(false);
+    }
+    
 	    
     render() {
 
 	return  (
 	    <div>
 		<Titlebar fixHeader={this.props.fixHeader}
-			  setShowRecipeModal={this.actions.setShowRecipeModal}
-			  showRecipeModal={this.props.showRecipeModal}/>
+			  onAdd={this.onAdd}/>
+		<RecipeModal showRecipeModal={this.props.showRecipeModal}
+			     addRecipe={this.addRecipe}
+			     close={this.close}/>
 		{this.props.children}
 		<Footer />
 	    </div>
