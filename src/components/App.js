@@ -17,13 +17,22 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-	//TODO replace this with local storage
-	$.getJSON("/data/recipes.json", (data) => {
-	    data.recipes.map((recipe) => {
-		recipe.url = this.urlise(recipe.name);
-		this.actions.addRecipe(recipe);
-	    })
-	});
+	
+	if (typeof(Storage) === "undefined" || Storage.length == 0) {
+	    // no recipes saved, load from json file
+	    console.log("Adding default recipes...");
+	    $.getJSON("/data/recipes.json", (data) => {
+		data.recipes.map((recipe) => {
+		    recipe.url = this.urlise(recipe.name);
+		    this.actions.addRecipe(recipe);
+		})
+	    });
+	}
+	else {
+	    console.log("Loading recipes...");
+	    console.log(window.localStorage);
+	}
+
 	
 	window.addEventListener("scroll", this.handleScroll.bind(this));
     }
