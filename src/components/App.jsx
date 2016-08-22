@@ -22,18 +22,28 @@ class App extends React.Component {
 
     
     componentDidMount() {
-
-            // no recipes saved, load from json file
-            console.log('Adding default recipes...');
-        $.getJSON('data/recipes.json', (data) => {
-            data.recipes.forEach((recipe) => {
-                console.log(recipe);
+        // no recipes saved, load from json file
+        if (typeof (localStorage) === 'undefined' || localStorage.length === 0) {
+            $.getJSON('data/recipes.json', (data) => {
+                const urlisedRecipes = [];
+                
+                data.recipes.forEach((recipe) => {
                     const nextRecipe = recipe;
                     nextRecipe.url = this.urlise(recipe.name);
+                    urlisedRecipes.push(nextRecipe);
                     this.actions.addRecipe(nextRecipe);
                 });
+                localStorage.setItem('recipes', JSON.stringify(urlisedRecipes));
             });
-
+        }
+        else {
+            // get recipes from local storage, add them to state
+            const addedRecipes = JSON.parse(localStorage.getItem('recipes'));
+            
+            addedRecipes.forEach((recipe) => {
+                this.actions.addRecipe(recipe);
+            });
+        } 
         
         window.addEventListener('scroll', this.handleScroll.bind(this));
     }
@@ -52,7 +62,7 @@ class App extends React.Component {
     addRecipe() {
         this.actions.setShowRecipeModal(false);
     }
-        // creates a unique url from a recipe name
+    // creates a unique url from a recipe name
     urlise(name) {
         const urlFromName = name.replace(/[^a-zA-Z0-9 ]/g, '')
                                 .split(' ').join('_');
@@ -80,7 +90,7 @@ class App extends React.Component {
         this.actions.setShowRecipeModal(false);  
     }
     
-            
+    
     render() {
         return (
             <div>
