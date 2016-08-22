@@ -4,11 +4,12 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/only-dev-server',
-        './src/index.js'
+        './src/index.jsx'
     ],
     module: {
-        loaders: [{
-            test: /\.js?$/,
+        loaders: [
+		{
+            test: /\.(jsx?|js?)$/,
             exclude: /node_modules/,
             loader: 'react-hot!babel'
         },
@@ -22,7 +23,7 @@ module.exports = {
        }]
     },
     resolve: {
-        extensions: ['', '.js']
+        extensions: ['', '.js', '.jsx']
     },
     output: {
         path: 'dist',
