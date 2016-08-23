@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Modal, FormGroup,
+import { Button, FormGroup,
          FormControl, ControlLabel } from 'react-bootstrap';
+import Draggable from 'react-draggable';
 
 class RecipeModal extends React.Component {
     
@@ -32,57 +33,62 @@ class RecipeModal extends React.Component {
 
     render() {
         return (
-            <Modal
-                className="addRecipeModal"
-                show={this.props.showRecipeModal}
-                onHide={this.props.addRecipe}
-            >
-                
-                <Modal.Header closeButton>
-                    <Modal.Title> Add Recipe </Modal.Title>
-                </Modal.Header>
-                
-                <Modal.Body>
-                    <form>
-                        <FormGroup controlId="m_recipeName">
-                            <ControlLabel>Recipe Name</ControlLabel>
-                            <FormControl
-                                type="text"
-                                placeholder="Enter recipe name"
-                                value={this.state.name}
-                                onChange={this.updateName}
-                            />
-                        </FormGroup>
-                        
-                        <FormGroup controlId="m_recipeIngredients">
-                            <ControlLabel>Ingredients</ControlLabel>
-                            <FormControl
-                                componentClass="textarea"
-                                value={this.state.ingredients}
-                                onChange={this.updateIngredients}
-                                placeholder="Enter ingredients, separated 
-                                             by commas *or* on separate lines."
-                            />
-                        </FormGroup>
-                        
-                        <FormGroup controlId="m_recipeMethod">
-                            <ControlLabel>Method</ControlLabel>
-                            <FormControl
-                                componentClass="textarea"
-                                value={this.state.method}
-                                onChange={this.updateMethod}
-                                placeholder="Enter the method. Put each step on a separate line."
-                            />
-                        </FormGroup>
-                    </form>
-                </Modal.Body>
-                
-                <Modal.Footer>
-                    <Button onClick={this.props.close}>
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+            <Draggable>
+                <div
+                    className="addRecipeModal modal"
+                >
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h4 className="modal-title"> Add Recipe </h4>
+                            </div>
+                            
+                            <div className="modal-body">
+                                <form>
+                                    <FormGroup controlId="m_recipeName">
+                                        <ControlLabel>Recipe Name</ControlLabel>
+                                        <FormControl
+                                            type="text"
+                                            placeholder="Enter recipe name"
+                                            value={this.state.name}
+                                            onChange={this.updateName}
+                                        />
+                                    </FormGroup>
+                                    
+                                    <FormGroup controlId="m_recipeIngredients">
+                                        <ControlLabel>Ingredients</ControlLabel>
+                                        <FormControl
+                                            componentClass="textarea"
+                                            value={this.state.ingredients}
+                                            onChange={this.updateIngredients}
+                                            placeholder="Enter ingredients, separated 
+                                                         by commas *or* on separate lines."
+                                        />
+                                    </FormGroup>
+                                    
+                                    <FormGroup controlId="m_recipeMethod">
+                                        <ControlLabel>Method</ControlLabel>
+                                        <FormControl
+                                            componentClass="textarea"
+                                            value={this.state.method}
+                                            onChange={this.updateMethod}
+                                            placeholder="Enter the method. 
+                                                         Put each step on a separate line."
+                                        />
+                                    </FormGroup>
+                                </form>
+                            </div>
+                            
+                            <div className="modal-footer">
+                                <Button onClick={this.props.close}>
+                                    Close
+                                </Button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </Draggable>
         );
     }
 }

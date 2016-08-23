@@ -2,7 +2,7 @@ import React from 'react';
 import Titlebar from './TitleBar';
 import RecipeModal from './RecipeModal';
 import Footer from './Footer';
-
+import Draggable from 'react-draggable';
 
 class App extends React.Component {
     constructor(props) {
@@ -98,12 +98,18 @@ class App extends React.Component {
                     fixHeader={this.props.fixHeader}
                     onAdd={this.onAdd}
                 />
-                <RecipeModal
-                    showRecipeModal={this.props.showRecipeModal}
-                    addRecipe={this.addRecipe}
-                    close={this.close}
-                />
+                
+                {
+                    this.props.showRecipeModal === true ?
+                        <RecipeModal
+                            addRecipe={this.addRecipe}
+                            close={this.close}
+                        /> :
+                    null
+                }
+                
                 {this.props.children}
+                
                 <Footer />
             </div>
         );
