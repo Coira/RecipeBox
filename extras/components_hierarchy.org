@@ -11,4 +11,12 @@
 ** RecipeCard
 *** IngredientsComponent
 *** MethodComponent
-
+** Recipe Modal
+*** Title
+*** Image
+*** Ingredients
+**** Ingredient Sections
+***** Ingredient Item
+*** Method
+**** Method Sections
+***** Instruction

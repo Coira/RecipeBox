@@ -2,7 +2,6 @@ import React from 'react';
 import Titlebar from './TitleBar';
 import RecipeModal from './RecipeModal';
 import Footer from './Footer';
-import Draggable from 'react-draggable';
 
 class App extends React.Component {
     constructor(props) {

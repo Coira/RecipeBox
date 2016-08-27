@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, FormGroup,
          FormControl, ControlLabel } from 'react-bootstrap';
 import Draggable from 'react-draggable';
+import RecipeModalList from './ModalComponents/RecipeModalList';
 
 class RecipeModal extends React.Component {
     
@@ -45,6 +46,9 @@ class RecipeModal extends React.Component {
                             
                             <div className="modal-body">
                                 <form>
+                                    <RecipeModalList
+                                        section="Ingredients"
+                                    />
                                     <FormGroup controlId="m_recipeName">
                                         <ControlLabel>Recipe Name</ControlLabel>
                                         <FormControl
@@ -76,6 +80,7 @@ class RecipeModal extends React.Component {
                                                          Put each step on a separate line."
                                         />
                                     </FormGroup>
+                                    
                                 </form>
                             </div>
                             

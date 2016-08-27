@@ -1,0 +1,10 @@
+.modal {
+    display: block;
+
+    .modal-body {
+        overflow-y: scroll;
+        max-height: calc(100vh - 200px);
+    }
+
+}
+
