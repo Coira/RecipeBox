@@ -1,18 +1,18 @@
 import React from 'react';
+import { List } from 'immutable';
 import { Button, FormGroup,
          FormControl, ControlLabel } from 'react-bootstrap';
-import ListRow from './ListRow';
-import { List } from 'immutable';
+import Row from './Row';
 
-class RecipeModalList extends React.Component {  
+class Section extends React.Component {  
     constructor(props) {
         super(props);
 
         // TODO use immutable
         this.state = {
-            items: new List(),
-            count: 2,
-            active: '',
+            items: new List(),   // elements in this section (e.g. "flour", "butter")
+            count: 2,    // how many elements does this section contain
+            active: '',  // which row is the user typing into
         };
 
         this.changeActive = this.changeActive.bind(this);
@@ -22,15 +22,17 @@ class RecipeModalList extends React.Component {
         const rows = [];
         for (let i = 0; i < this.state.count; i++) {
             rows.push(
-                <ListRow
+                <Row
                     key={i}
                     index={i}
                     lastIndex={this.state.count}
                     changeActive={this.changeActive}
+                    type={this.props.type}
                 />
             );
         }
-        return (<table><tbody>{rows}</tbody></table>);
+        
+        return (<div className="section-table flexCol">{rows}</div>);
     }
 
     changeActive(index, value) {
@@ -40,25 +42,17 @@ class RecipeModalList extends React.Component {
             this.setState({ active: index });
             this.setState({ count: this.state.count + 1 });
         }
-        
     }
-    
-    //updateEdit(index) {
-    //    console.log(index);
-    // }
-
-    
-    
 
     render() {
         return (
             <FormGroup>
-                <ControlLabel>Main {this.props.section}</ControlLabel>
+                <ControlLabel>Main {this.props.type}</ControlLabel>
                 {this.createTable()}
             </FormGroup>
         );
     }
 }
 
-export default RecipeModalList;
+export default Section;
 

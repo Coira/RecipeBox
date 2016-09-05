@@ -1,8 +1,9 @@
 import React from 'react';
+import { List } from 'immutable';
 import { Button, FormGroup,
          FormControl, ControlLabel } from 'react-bootstrap';
 import Draggable from 'react-draggable';
-import RecipeModalList from './ModalComponents/RecipeModalList';
+import Section from './ModalComponents/Section';
 
 class RecipeModal extends React.Component {
     
@@ -11,8 +12,8 @@ class RecipeModal extends React.Component {
 
         this.state = {
             name: '',
-            ingredients: [],
-            method: [],
+            ingredientSections: new List([{ name: 'main', ingredients: [] }]),
+            methodSections: new List([{ name: 'main', instructions: [] }]),
         };
 
         this.updateName = this.updateName.bind(this);
@@ -34,7 +35,7 @@ class RecipeModal extends React.Component {
 
     render() {
         return (
-            <Draggable>
+            <Draggable handle=".modal-header">
                 <div
                     className="addRecipeModal modal"
                 >
@@ -46,41 +47,73 @@ class RecipeModal extends React.Component {
                             
                             <div className="modal-body">
                                 <form>
-                                    <RecipeModalList
-                                        section="Ingredients"
-                                    />
-                                    <FormGroup controlId="m_recipeName">
-                                        <ControlLabel>Recipe Name</ControlLabel>
+
+                                    {
+                                        this.state.ingredientSections.map((section, index) => (
+                                            <Section
+                                                className="section"
+                                                key={`is_${index}`}
+                                                type="Ingredients"
+                                                name={section.name}
+                                            />
+                                        ))
+                                    }
+                                       
+                                    <FormGroup className="form-inline">
+                                   
                                         <FormControl
+                                            className=""
                                             type="text"
-                                            placeholder="Enter recipe name"
-                                            value={this.state.name}
-                                            onChange={this.updateName}
+                                            placeholder="Add New Ingredients Section Name
+                                                         (e.g. Ingredients Needed For The Filling)"
                                         />
+                                            
+                                        <button
+                                            type="button"
+                                            className="btn btn-default new-form-btn"
+                                            aria-label="New Section"
+                                        >
+                                            <span
+                                                className="glyphicon glyphicon-plus"
+                                                aria-hidden="true"
+                                            />
+                                        </button>
+                                       
                                     </FormGroup>
-                                    
-                                    <FormGroup controlId="m_recipeIngredients">
-                                        <ControlLabel>Ingredients</ControlLabel>
+                                       
+                                    {
+                                        this.state.methodSections.map((section, index) => (
+                                            <Section
+                                                className="section"
+                                                key={`ms_${index}`}
+                                                type="Method"
+                                                name={section.name}
+                                            />
+                                        ))
+                                    }
+                
+                                    <FormGroup className="form-inline">
+                                   
                                         <FormControl
-                                            componentClass="textarea"
-                                            value={this.state.ingredients}
-                                            onChange={this.updateIngredients}
-                                            placeholder="Enter ingredients, separated 
-                                                         by commas *or* on separate lines."
+                                            className=""
+                                            type="text"
+                                            placeholder="Add New Method Section Name
+                                                         (e.g. How To Make The Filling)"
                                         />
+                                            
+                                        <button
+                                            type="button"
+                                            className="btn btn-default new-form-btn"
+                                            aria-label="New Section"
+                                        >
+                                            <span
+                                                className="glyphicon glyphicon-plus"
+                                                aria-hidden="true"
+                                            />
+                                        </button>
+                                       
                                     </FormGroup>
-                                    
-                                    <FormGroup controlId="m_recipeMethod">
-                                        <ControlLabel>Method</ControlLabel>
-                                        <FormControl
-                                            componentClass="textarea"
-                                            value={this.state.method}
-                                            onChange={this.updateMethod}
-                                            placeholder="Enter the method. 
-                                                         Put each step on a separate line."
-                                        />
-                                    </FormGroup>
-                                    
+                                                    
                                 </form>
                             </div>
                             

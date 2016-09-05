@@ -31,6 +31,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "autosize": "^3.0.17",
     "classnames": "^2.2.5",
     "immutable": "^3.8.1",
     "react": "^15.2.1",
