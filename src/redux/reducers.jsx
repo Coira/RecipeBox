@@ -20,9 +20,9 @@ export default function reducer(state = fromJS({ recipes: {} }), action) {
             // fixes titlebar to top of screen when scrolling
             return state.set('fixHeader', action.value);
             
-        case 'SET_SHOW_RECIPE_MODAL':
+        case 'SET_MODAL_VISIBILITY':
             // show modal where user can add or edit recipes
-            return state.set('showRecipeModal', action.value);
+            return state.set('modalVisibility', action.value);
             
         default:
             return state;

@@ -28,7 +28,7 @@ export function fixHeader(value) {
 
 export function setShowRecipeModal(value) {
     return {
-        type: 'SET_SHOW_RECIPE_MODAL',
+        type: 'SET_MODAL_VISIBILITY',
         value,
     };
 }

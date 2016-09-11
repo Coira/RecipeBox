@@ -21,7 +21,7 @@ const mapStateToProps = (state) => (
     {
         recipes: state.get('recipes'),
         fixHeader: state.get('fixHeader'),
-        showRecipeModal: state.get('showRecipeModal'),
+        modalVisibility: state.get('modalVisibility'),
     }
 );
 

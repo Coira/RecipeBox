@@ -1,6 +1,6 @@
 import React from 'react';
 import { List } from 'immutable';
-import { Button, FormGroup,
+import { Button, FormGroup, Col,
          FormControl, ControlLabel } from 'react-bootstrap';
 import Row from './Row';
 
@@ -8,13 +8,21 @@ class Section extends React.Component {
     constructor(props) {
         super(props);
 
-        // TODO use immutable
+        /*
         this.state = {
             items: new List(),   // elements in this section (e.g. "flour", "butter")
             count: 2,    // how many elements does this section contain
             active: '',  // which row is the user typing into
+            editValue: '', // the value of the row the user is currently editing
         };
-
+         */
+        this.state = {
+            count: 2,
+        };
+        
+        this.editValue = '';
+        this.items = new List();
+        this.active = -1;
         this.changeActive = this.changeActive.bind(this);
     }
 
@@ -36,13 +44,21 @@ class Section extends React.Component {
     }
 
     changeActive(index, value) {
-        if (this.state.active !== index) {
-            const items = this.state.items.set(this.state.active, value);
-            this.setState({ items });
-            this.setState({ active: index });
-            this.setState({ count: this.state.count + 1 });
+        if (this.active !== index) {
+            // add the previous user input into this section's elements array
+            this.items = this.items.set(this.active, this.editValue);
+            this.active = index;
+
+            // change the active row, and if it's a new element, increment count
+            if (this.active >= this.state.count - 2) {
+                this.setState({ count: this.state.count + 1 });
+            }
         }
+
+        // keep the current user input value up-to-date
+        this.editValue = value;
     }
+    
 
     render() {
         return (

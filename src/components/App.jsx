@@ -7,7 +7,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
-        this.onAdd = this.onAdd.bind(this);
+        this.showRecipeModal = this.showRecipeModal.bind(this);
         this.addRecipe = this.addRecipe.bind(this);
         this.close = this.close.bind(this);
 
@@ -51,16 +51,16 @@ class App extends React.Component {
         window.removeEventListener('scroll', this.handleScroll.bind(this));
     }
 
-    // user clicks on 'add recipe' in recipe modal
-    onAdd() {
-        console.log('onAdd');
-        this.actions.setShowRecipeModal(true);
-    }
-    
-    // display recipe modal
+    // user clicks on 'Add' in recipe modal -- add new recipe to state
     addRecipe() {
         this.actions.setShowRecipeModal(false);
     }
+    
+    // user clicks the 'add recipe' button in titlebar -- show recipe modal
+    showRecipeModal() {
+        this.actions.setShowRecipeModal(true);
+    }
+    
     // creates a unique url from a recipe name
     urlise(name) {
         const urlFromName = name.replace(/[^a-zA-Z0-9 ]/g, '')
@@ -88,21 +88,22 @@ class App extends React.Component {
     close() {
         this.actions.setShowRecipeModal(false);  
     }
-    
-    
+
     render() {
         return (
             <div>
                 <Titlebar
                     fixHeader={this.props.fixHeader}
-                    onAdd={this.onAdd}
+                    onAdd={this.showRecipeModal}
                 />
                 
                 {
-                    this.props.showRecipeModal === true ?
+                    this.props.modalVisibility === true ?
                         <RecipeModal
                             addRecipe={this.addRecipe}
+                            removeRecipe={this.removeRecipe}
                             close={this.close}
+                            
                         /> :
                     null
                 }

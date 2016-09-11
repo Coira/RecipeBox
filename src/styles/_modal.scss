@@ -1,6 +1,12 @@
+.modal-dialog {
+    width: 800px;
+}
+
 .modal {
     display: block;
     resize: both;
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
     
     .modal-body {
         overflow-y: scroll;
@@ -8,8 +14,9 @@
     }
 
     .form-control {
-        width: 90%;
-        margin-right: 5px;
+        /*width: 70%;
+        margin-left: 15px;*/
+        /*background-color: red;*/
     }
 
     .new-form-btn {
@@ -22,6 +29,37 @@
         }
 
     }
+
+    .pastel-green {
+        /*background-color: #eaeff4;*/
+        background-color: #d3e7e7;
+        border-color: #b4cbcb;
+    }
+
+    .pastel-red {
+        background-color: #f4eaef;
+        border-color: #e2c9d6;
+    }
+    
+    .pastel-blue {
+        background-color: #d9e2eb;
+        border-color: #c3cbd3;
+    }
+    
+    .info {
+        font-family: 'EB Garamond', serif;
+        font-weight: normal;
+        line-height: 23px;
+        font-size: 20px;
+        margin: 10 0 30 0; 
+    }
+        
+        .long-input {
+            flex-grow: 1;
+            /*width: 70%;*/
+          /* margin: 10 10 10 10;*/
+        }
+    
 }
 
 	

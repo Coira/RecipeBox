@@ -21,6 +21,10 @@ body {
     flex-direction: column;
 }
 
+.verticallyCentered {
+    align-items: center;
+}
+
 .border {
     border: 1px solid black;
 }

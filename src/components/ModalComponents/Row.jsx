@@ -1,18 +1,16 @@
 import React from 'react';
-import classnames from 'classnames';
 import autosize from 'autosize';
 
-import { Button, FormGroup,
-         FormControl, ControlLabel } from 'react-bootstrap';
+import { FormControl } from 'react-bootstrap';
 
 class Row extends React.Component {
     constructor(props) {
         super(props);
-        
+
         this.state = {
             value: '',
         };
-
+        
         this.onChange = this.onChange.bind(this);
     }
 
@@ -25,14 +23,14 @@ class Row extends React.Component {
     onChange(event) {
         const type = this.props.type;
         const index = this.props.index;
+        this.props.changeActive(index, this.state.value);
         this.setState({ value: event.target.value });
-        this.props.changeActive(this.props.index, this.props.value);
         autosize(document.querySelector(`#section-row-${type}-${index}`));
     } 
     
     render() {
         return (
-            <FormGroup className="form-inline">
+            <div className="flexRow">
                 <FormControl
                     className="section-row"
                     id={`section-row-${this.props.type}-${this.props.index}`}
@@ -45,8 +43,18 @@ class Row extends React.Component {
                     rows="1"
                 />
 
-            <button className="btn btn-default">-</button>
-            </FormGroup>
+                <button
+                    type="button"
+                    className="btn btn-default delete-element"
+                    aria-label="Delete Element"
+                    tabIndex="-1"
+                >
+                    <span
+                        className="glyphicon glyphicon-minus"
+                        aria-hidden="true"
+                    />
+                </button>
+            </div>
         );
     }
     
