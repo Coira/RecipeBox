@@ -13,16 +13,17 @@ class App extends React.Component {
 
         this.actions = this.props.actions;
         this.urls = [];
-        
-        this.testVar = '';
-        this.testUnvar = 3;
-        this.tins = {};
+        this.recipeId = 0;
+
     } 
 
     
     componentDidMount() {
+        $('.modal').hide();
+        
         // no recipes saved, load from json file
-        if (typeof (localStorage) === 'undefined' || localStorage.length === 0) {
+        if (typeof (localStorage) === 'undefined' ||
+            localStorage.length === 0) {
             $.getJSON('data/recipes.json', (data) => {
                 const urlisedRecipes = [];
                 
@@ -42,8 +43,8 @@ class App extends React.Component {
             addedRecipes.forEach((recipe) => {
                 this.actions.addRecipe(recipe);
             });
-        } 
-        
+        }
+        this.recipeId = 5;
         window.addEventListener('scroll', this.handleScroll.bind(this));
     }
 
@@ -52,13 +53,24 @@ class App extends React.Component {
     }
 
     // user clicks on 'Add' in recipe modal -- add new recipe to state
-    addRecipe() {
-        this.actions.setShowRecipeModal(false);
+    addRecipe(recipe) {
+        //console.log("add recipe");
+        //console.log("recipe");
+        //this.actions.setShowRecipeModal(false);
+        $('.modal').hide();
+        const newRecipe = recipe;
+        newRecipe.url = this.urlise(recipe.name);
+        newRecipe.id = this.recipeId;
+        this.recipeId++;
+        newRecipe.img = "food-eggs.jpg";
+        this.actions.addRecipe(newRecipe);
     }
     
     // user clicks the 'add recipe' button in titlebar -- show recipe modal
     showRecipeModal() {
-        this.actions.setShowRecipeModal(true);
+        //this.actions.setShowRecipeModal(true);
+        $('.modal').show();
+        $('.autofocus').focus();
     }
     
     // creates a unique url from a recipe name
@@ -86,7 +98,8 @@ class App extends React.Component {
 
     // close modal -- cancel and delete recipe input?
     close() {
-        this.actions.setShowRecipeModal(false);  
+        //this.actions.setShowRecipeModal(false);
+        $('.modal').hide();
     }
 
     render() {
@@ -97,16 +110,14 @@ class App extends React.Component {
                     onAdd={this.showRecipeModal}
                 />
                 
-                {
-                    this.props.modalVisibility === true ?
-                        <RecipeModal
-                            addRecipe={this.addRecipe}
-                            removeRecipe={this.removeRecipe}
-                            close={this.close}
-                            
-                        /> :
-                    null
-                }
+                <RecipeModal
+                    className="modal"
+                    addRecipe={this.addRecipe}
+                    removeRecipe={this.removeRecipe}
+                    close={this.close}
+                    enforceFocus={false}
+                    showModal={this.props.modalVisibility}
+                /> 
                 
                 {this.props.children}
                 

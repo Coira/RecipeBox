@@ -8,24 +8,30 @@ class Section extends React.Component {
     constructor(props) {
         super(props);
 
-        /*
-        this.state = {
-            items: new List(),   // elements in this section (e.g. "flour", "butter")
-            count: 2,    // how many elements does this section contain
-            active: '',  // which row is the user typing into
-            editValue: '', // the value of the row the user is currently editing
-        };
-         */
         this.state = {
             count: 2,
         };
         
         this.editValue = '';
         this.items = new List();
-        this.active = -1;
-        this.changeActive = this.changeActive.bind(this);
+        this.active = 0;
+        this.addItem = this.addItem.bind(this);
+        this.switchRow = this.switchRow.bind(this);
+        //this.updateRecipe = this.updateRecipe.bind(this);
+        this.onBlur = this.onBlur.bind(this);
     }
 
+    onBlur() {
+        this.props.updateRecipe(this.props.index, this.items);
+    }
+
+    /*
+    updateParent() {
+        console.log(`${this.props.type} update parent`);
+        this.props.updateRecipe(this.props.name, this.items);
+    }
+    */
+    
     createTable() {
         const rows = [];
         for (let i = 0; i < this.state.count; i++) {
@@ -34,8 +40,9 @@ class Section extends React.Component {
                     key={i}
                     index={i}
                     lastIndex={this.state.count}
-                    changeActive={this.changeActive}
                     type={this.props.type}
+                    addItem={this.addItem}
+                    switchRow={this.switchRow}
                 />
             );
         }
@@ -43,26 +50,23 @@ class Section extends React.Component {
         return (<div className="section-table flexCol">{rows}</div>);
     }
 
-    changeActive(index, value) {
-        if (this.active !== index) {
-            // add the previous user input into this section's elements array
-            this.items = this.items.set(this.active, this.editValue);
-            this.active = index;
+    // add a Row's value to our array
+    addItem(index, value) {
+        this.items = this.items.set(index, value);
+    }
 
-            // change the active row, and if it's a new element, increment count
-            if (this.active >= this.state.count - 2) {
-                this.setState({ count: this.state.count + 1 });
-            }
+    // if user has used a new Row, open up another Row for them
+    switchRow(index) {
+        if (this.state.count === 2 ||
+            (index >= this.state.count - 2 &&
+             this.items.get(this.state.count - 3))) {
+            this.setState({ count: this.state.count + 1 });
         }
-
-        // keep the current user input value up-to-date
-        this.editValue = value;
     }
     
-
     render() {
         return (
-            <FormGroup>
+            <FormGroup onBlur={this.onBlur}>
                 <ControlLabel>Main {this.props.type}</ControlLabel>
                 {this.createTable()}
             </FormGroup>

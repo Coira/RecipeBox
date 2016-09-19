@@ -12,6 +12,8 @@ class Row extends React.Component {
         };
         
         this.onChange = this.onChange.bind(this);
+        this.onBlur = this.onBlur.bind(this);
+        this.onFocus = this.onFocus.bind(this);
     }
 
     componentDidMount() {
@@ -23,10 +25,20 @@ class Row extends React.Component {
     onChange(event) {
         const type = this.props.type;
         const index = this.props.index;
-        this.props.changeActive(index, this.state.value);
+               
         this.setState({ value: event.target.value });
         autosize(document.querySelector(`#section-row-${type}-${index}`));
     } 
+
+    // when Row loses focus, pass its value on to parent for storage
+    onBlur() {
+        this.props.addItem(this.props.index, this.state.value);
+    }
+
+    // switch active Row in parent
+    onFocus() {
+        this.props.switchRow(this.props.index);
+    }
     
     render() {
         return (
@@ -40,6 +52,8 @@ class Row extends React.Component {
                     placeholder={`Enter ${this.props.type}`}
                     value={this.state.value}
                     onChange={this.onChange}
+                    onBlur={this.onBlur}
+                    onFocus={this.onFocus}
                     rows="1"
                 />
 
