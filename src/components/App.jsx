@@ -13,8 +13,6 @@ class App extends React.Component {
 
         this.actions = this.props.actions;
         this.urls = [];
-        this.recipeId = 0;
-
     } 
 
     
@@ -27,9 +25,10 @@ class App extends React.Component {
             $.getJSON('data/recipes.json', (data) => {
                 const urlisedRecipes = [];
                 
-                data.recipes.forEach((recipe) => {
+                data.recipes.forEach((recipe, index) => {
                     const nextRecipe = recipe;
                     nextRecipe.url = this.urlise(recipe.name);
+                    nextRecipe.id = index;
                     urlisedRecipes.push(nextRecipe);
                     this.actions.addRecipe(nextRecipe);
                 });
@@ -38,13 +37,11 @@ class App extends React.Component {
         }
         else {
             // get recipes from local storage, add them to state
-            const addedRecipes = JSON.parse(localStorage.getItem('recipes'));
-            
-            addedRecipes.forEach((recipe) => {
+            const storedRecipes = JSON.parse(localStorage.getItem('recipes'));
+            storedRecipes.forEach((recipe) => {
                 this.actions.addRecipe(recipe);
             });
         }
-        this.recipeId = 5;
         window.addEventListener('scroll', this.handleScroll.bind(this));
     }
 
@@ -54,19 +51,24 @@ class App extends React.Component {
 
     // user clicks on 'Add' in recipe modal -- add new recipe to state
     addRecipe(recipe) {
-        //console.log("add recipe");
-        //console.log("recipe");
-        //this.actions.setShowRecipeModal(false);
         $('.modal').hide();
+
+        const id = localStorage.getItem('nextId');
+        
         const newRecipe = recipe;
         newRecipe.url = this.urlise(recipe.name);
-        newRecipe.id = this.recipeId;
-        this.recipeId++;
         newRecipe.img = "food-eggs.jpg";
+
+        // add recipe to state
         this.actions.addRecipe(newRecipe);
+
+        // add recipe to local storage
+        const recipes = JSON.parse(localStorage.getItem('recipes'));
+        recipes.push(newRecipe);
+        localStorage.setItem('recipes', JSON.stringify(recipes));
     }
     
-    // user clicks the 'add recipe' button in titlebar -- show recipe modal
+    // user clicks the 'add recipe ' link in titlebar -- show recipe modal
     showRecipeModal() {
         //this.actions.setShowRecipeModal(true);
         $('.modal').show();

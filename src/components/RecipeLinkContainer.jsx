@@ -13,12 +13,12 @@ const RecipeLinkContainer = ({ rps }) => {
             {
                 sortedRecipes.valueSeq().map((recipe) => (
                     <RecipeLink
-                        key={recipe.id}
+                        key={recipe.url}
                         url={recipe.url}
                         name={recipe.name}
-                        prepTime={recipe.prep_time}
-                        cookTime={recipe.cook_time}
-                        serves={recipe.serves}
+                        prepTime={String(recipe.prep_time)}
+                        cookTime={String(recipe.cook_time)}
+                        serves={String(recipe.serves)}
                         img={recipe.img}
                     />
               ))

@@ -13,7 +13,7 @@ export default function reducer(state = fromJS({ recipes: {} }), action) {
             return state.set('recipes', updatedRecipes);
         }
             
-        case 'REMOVE_RECIPE': return state;
+        case 'DELETE_RECIPE': return state;
         case 'EDIT_RECIPE': return state;
 
         case 'FIX_HEADER':

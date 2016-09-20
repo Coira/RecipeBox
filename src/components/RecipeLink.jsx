@@ -19,14 +19,14 @@ const RecipeLink = ({ name, prepTime, cookTime, serves, img, url }) => (
                     <div className="top">
                         <div className="title">{name}</div>
                         <div className="serves">
-                            {serves ? `Serves:${serves}` : ''}</div>
+                            {serves ? `Serves: ${serves}` : ''}</div>
                     </div>
                     <div className="bottom">
                         <div className="prepTime">
-                            {prepTime ? `Prep Time:${prepTime}` : ''}
+                            {prepTime ? `Prep Time: ${prepTime}` : ''}
                         </div>
                         <div className="cookTime">
-                            {cookTime ? `Cook Time:${cookTime}` : ''}
+                            {cookTime ? `Cook Time: ${cookTime}` : ''}
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ RecipeLink.propTypes = {
     img: React.PropTypes.string,
     prepTime: React.PropTypes.string,
     cookTime: React.PropTypes.string,
-    serves: React.PropTypes.number,
+    serves: React.PropTypes.string,
     url: React.PropTypes.string.isRequired,
 };
 

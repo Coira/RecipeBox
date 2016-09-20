@@ -1,8 +1,6 @@
 {
-	"last_id": 4,
 	"recipes": [
 		{
-			"id": 1,
 			"name": "Garlic mushroom frittata",
 			"prep_time": "less than 30 mins",
 			"cook_time": "10 to 30 mins",
@@ -30,7 +28,6 @@
 			}
 		},
 		{
-			"id": 2,
 			"name": "Chicken in a creamy mushroom sauce",
 			"prep_time": "less than 30 mins",
 			"cook_time": "10 to 30 mins",
@@ -61,7 +58,6 @@
 		
 		},
 		{
-			"id": 3,
 			"name": "Garlic mushroom frittata + a really long title",
 			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
@@ -111,7 +107,6 @@
 			}
 		},
 				{
-			"id": 4,
 			"name": "Garlic mushroom frittata",
 			"prep_time": "less than 30 mins",
 			"oven_temp": "",

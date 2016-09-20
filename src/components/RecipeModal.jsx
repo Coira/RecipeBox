@@ -69,6 +69,7 @@ class RecipeModal extends React.Component {
 
         const recipe = {
             name: this.state.name || 'unnamed_recipe',
+            serves: this.state.servings,
             prep_time: this.state.prepTime,
             cook_time: this.state.cookTime,
             oven_temp: '',
@@ -76,10 +77,7 @@ class RecipeModal extends React.Component {
             method,
         };
 
-        console.log(JSON.stringify(recipe));
         this.props.addRecipe(recipe);
-
-        
     }
 
     updateIngredients(index, items) {

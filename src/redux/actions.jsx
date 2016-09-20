@@ -5,9 +5,9 @@ export function addRecipe(recipe) {
     };
 }
 
-export function removeRecipe(id) {
+export function deleteRecipe(id) {
     return {
-        type: 'REMOVE_RECIPE',
+        type: 'DELETE_RECIPE',
         id,
     };
 }
