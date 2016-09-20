@@ -1,15 +1,19 @@
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import React from 'react';
 import RecipeLinkContainer from './RecipeLinkContainer';
+import * as actionCreators from '../redux/actions';
 
-const Home = (props) => {
-    const recipes = props.recipes;
-    return (
-        <div>
-            <RecipeLinkContainer rps={recipes} />
-        </div>
-    );
-};
+const Home = (props) => (
+    <div>
+        <RecipeLinkContainer
+            rps={props.recipes}
+            editFtn={props.actions.editRecipe}
+            deleteFtn={props.actions.deleteRecipe}
+        />
+    </div>
+);
+
 
 const mapStateToProps = (state) => (
     {
@@ -17,9 +21,16 @@ const mapStateToProps = (state) => (
     }
 );
 
+const mapDispatchToProps = (dispatch) => (
+    {
+        actions: bindActionCreators(actionCreators, dispatch),
+    }
+);
+
+
 const ConnectedHome = connect(
     mapStateToProps,
-    null
+    mapDispatchToProps
 )(Home);
 
 export default ConnectedHome;

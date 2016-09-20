@@ -4,10 +4,10 @@ import RecipeLink from './RecipeLink';
 
 const recipesDefault = new Map();
 
-const RecipeLinkContainer = ({ rps }) => {
+const RecipeLinkContainer = ({ rps, editFtn, deleteFtn }) => {
     const recipes = rps || recipesDefault;
     const sortedRecipes = recipes.sortBy(recipe => recipe.url);
- 
+    console.log(typeof editFtn);
     return (
         <div id="recipeLinkContainer">
             {
@@ -20,6 +20,8 @@ const RecipeLinkContainer = ({ rps }) => {
                         cookTime={String(recipe.cook_time)}
                         serves={String(recipe.serves)}
                         img={recipe.img}
+                        editFtn={editFtn}
+                        deleteFtn={deleteFtn}
                     />
               ))
             }

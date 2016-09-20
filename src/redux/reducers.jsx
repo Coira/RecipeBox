@@ -12,10 +12,13 @@ export default function reducer(state = fromJS({ recipes: {} }), action) {
             const updatedRecipes = recipes.set(key, recipe);
             return state.set('recipes', updatedRecipes);
         }
-            
-        case 'DELETE_RECIPE': return state;
-        case 'EDIT_RECIPE': return state;
-
+        case 'DELETE_RECIPE': {
+            const recipes = state.get('recipes');
+            return state.set('recipes', recipes.delete(action.id));
+        }
+        case 'EDIT_RECIPE':
+             console.log(`edit ${action.id}`);
+            return state;
         case 'FIX_HEADER':
             // fixes titlebar to top of screen when scrolling
             return state.set('fixHeader', action.value);

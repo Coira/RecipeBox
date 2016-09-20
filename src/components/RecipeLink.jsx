@@ -3,10 +3,12 @@ import NavLink from './NavLink';
 
 const imgUrl = '/imgs/';
 
-const RecipeLink = ({ name, prepTime, cookTime, serves, img, url }) => (
-    <NavLink to={`/recipes/${url}`}>
-        <div className="recipeLink flexRow">
-            <div className="foodInfo">
+const RecipeLink = ({ name, prepTime, cookTime, serves, img, url,
+                      editFtn, deleteFtn }) => (
+                          
+    <div className="recipeLink flexRow">
+        <div className="foodInfo">
+            <NavLink to={`/recipes/${url}`}>
                 <div className="foodImg">
                     <img
                         src={imgUrl + (img || 'generic.jpeg')}
@@ -15,30 +17,40 @@ const RecipeLink = ({ name, prepTime, cookTime, serves, img, url }) => (
                         alt="food_pic"
                     />
                 </div>
-                <div className="text flexCol">
-                    <div className="top">
-                        <div className="title">{name}</div>
-                        <div className="serves">
-                            {serves ? `Serves: ${serves}` : ''}</div>
+            </NavLink>
+            <div className="text flexCol">
+                <div className="top">
+                    <div className="title">{name}</div>
+                    <div className="serves">
+                        {serves ? `Serves: ${serves}` : ''}</div>
+                </div>
+                <div className="bottom">
+                    <div className="prepTime">
+                        {prepTime ? `Prep Time: ${prepTime}` : ''}
                     </div>
-                    <div className="bottom">
-                        <div className="prepTime">
-                            {prepTime ? `Prep Time: ${prepTime}` : ''}
-                        </div>
-                        <div className="cookTime">
-                            {cookTime ? `Cook Time: ${cookTime}` : ''}
-                        </div>
+                    <div className="cookTime">
+                        {cookTime ? `Cook Time: ${cookTime}` : ''}
                     </div>
                 </div>
             </div>
-
-            <div className="iconCont flexRow">
-                <div className="icon">E</div>
-                <div className="icon">D</div>
-            </div>
-
         </div>
-    </NavLink>
+        
+        <div className="iconCont flexRow">
+            <div className="icon">E</div>
+            <div className="icon">D</div>
+            <button
+                onClick={() => {
+                    editFtn(url);
+                }}
+            >b</button>
+            <button
+                onClick={() => {
+                    deleteFtn(url);
+                }}
+            >d</button>
+        </div>
+        
+    </div>
 );
 
 RecipeLink.propTypes = {
