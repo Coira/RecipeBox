@@ -118,7 +118,7 @@ class App extends React.Component {
                     removeRecipe={this.removeRecipe}
                     close={this.close}
                     enforceFocus={false}
-                    showModal={this.props.modalVisibility}
+                    preloaded={this.props.preloaded}
                 /> 
                 
                 {this.props.children}

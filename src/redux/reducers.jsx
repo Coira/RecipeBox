@@ -17,15 +17,12 @@ export default function reducer(state = fromJS({ recipes: {} }), action) {
             return state.set('recipes', recipes.delete(action.id));
         }
         case 'EDIT_RECIPE':
-             console.log(`edit ${action.id}`);
-            return state;
+            console.log(`edit ${action.id}`);
+            return state.set('preloaded', state.get('recipes')
+                                               .get(action.id));
         case 'FIX_HEADER':
             // fixes titlebar to top of screen when scrolling
             return state.set('fixHeader', action.value);
-            
-        case 'SET_MODAL_VISIBILITY':
-            // show modal where user can add or edit recipes
-            return state.set('modalVisibility', action.value);
             
         default:
             return state;

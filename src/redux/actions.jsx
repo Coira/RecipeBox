@@ -25,11 +25,3 @@ export function fixHeader(value) {
         value,
     };
 }
-
-export function setShowRecipeModal(value) {
-    return {
-        type: 'SET_MODAL_VISIBILITY',
-        value,
-    };
-}
-

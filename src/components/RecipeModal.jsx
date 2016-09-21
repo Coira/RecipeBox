@@ -31,8 +31,7 @@ class RecipeModal extends React.Component {
         this.updateIngredients = this.updateIngredients.bind(this);
         this.updateMethod = this.updateMethod.bind(this);
     }
-
-
+   
     editName(event) {
         this.setState({ name: event.target.value });
     }
