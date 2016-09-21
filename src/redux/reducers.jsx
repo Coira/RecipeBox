@@ -2,7 +2,8 @@ import { fromJS } from 'immutable';
 
 // TODO split recipe reducers from other reducers
 
-export default function reducer(state = fromJS({ recipes: {} }), action) {    
+export default function reducer(state = fromJS({ recipes: {}, wipRecipe: {} }),
+                                action) {    
     switch (action.type) {
         case 'ADD_RECIPE': {
             const recipes = state.get('recipes');
@@ -10,15 +11,16 @@ export default function reducer(state = fromJS({ recipes: {} }), action) {
             const recipe = action.recipe;
             const key = recipe.url;
             const updatedRecipes = recipes.set(key, recipe);
-            return state.set('recipes', updatedRecipes);
+            const nextState = state.set('wipRecipes', {});
+            return nextState.set('recipes', updatedRecipes);
         }
         case 'DELETE_RECIPE': {
             const recipes = state.get('recipes');
             return state.set('recipes', recipes.delete(action.id));
         }
         case 'EDIT_RECIPE':
-            console.log(`edit ${action.id}`);
-            return state.set('preloaded', state.get('recipes')
+            $('.modal').show();
+            return state.set('wipRecipe', state.get('recipes')
                                                .get(action.id));
         case 'FIX_HEADER':
             // fixes titlebar to top of screen when scrolling

@@ -118,7 +118,7 @@ class App extends React.Component {
                     removeRecipe={this.removeRecipe}
                     close={this.close}
                     enforceFocus={false}
-                    preloaded={this.props.preloaded}
+                    wipRecipe={this.props.wipRecipe}
                 /> 
                 
                 {this.props.children}

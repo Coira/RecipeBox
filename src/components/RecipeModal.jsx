@@ -9,7 +9,7 @@ class RecipeModal extends React.Component {
     
     constructor(props) {
         super(props);
-
+        console.log(props.wipRecipe);
         // there may be multiple parts (i.e. sections) to a recipe's
         // ingredients/method each section keeps track of its own elements
         this.state = {
@@ -26,14 +26,22 @@ class RecipeModal extends React.Component {
         this.editServings = this.editServings.bind(this);
         this.editCookTime = this.editCookTime.bind(this);
         this.editPrepTime = this.editPrepTime.bind(this);
-
+        this.clearForm = this.clearForm.bind(this);
         this.addRecipe = this.addRecipe.bind(this);
         this.updateIngredients = this.updateIngredients.bind(this);
         this.updateMethod = this.updateMethod.bind(this);
     }
-   
+
+    componentWillReceiveProps({ wipRecipe }) {
+        const { name = '', servings = '', cookTime = '', prepTime = '' } =
+            wipRecipe;
+        console.log(servings);
+        this.setState({ name, servings, cookTime, prepTime });
+    }
+    
     editName(event) {
         this.setState({ name: event.target.value });
+        //this.props.wipRecipe.name = event.target.value;
     }
 
     editServings(event) {
@@ -46,6 +54,10 @@ class RecipeModal extends React.Component {
 
     editPrepTime(event) {
         this.setState({ prepTime: event.target.value });
+    }
+
+    clearForm() {
+        this.setState({ name: '', servings: '', prepTime: '', cookTime: '' });
     }
     
 
@@ -67,7 +79,7 @@ class RecipeModal extends React.Component {
         });
 
         const recipe = {
-            name: this.state.name || 'unnamed_recipe',
+            name: '',
             serves: this.state.servings,
             prep_time: this.state.prepTime,
             cook_time: this.state.cookTime,
@@ -110,6 +122,7 @@ class RecipeModal extends React.Component {
                                     <ControlLabel>Name</ControlLabel>
                                     <FormControl
                                         className="long-input autofocus"
+                                        id="recipe-modal-name"
                                         type="text"
                                         value={this.state.name}
                                         onChange={this.editName}
@@ -173,46 +186,46 @@ class RecipeModal extends React.Component {
 
                             <Panel className="pastel-blue">
                                 {
-                                    this.state.ingredientSections.valueSeq().map(
+                                    this.state
+                                        .ingredientSections.valueSeq().map(
                                         (section, index) => (
                                             <Section
                                                 className="section"
                                                 key={`is_${index}`}
                                                 type="Ingredients"
                                                 name={section.name}
-                                                updateRecipe={this.updateIngredients}
+                                                updateRecipe={
+                                                    this.updateIngredients}
                                             />
                                         ))
                                 }
                 
-                <FormGroup
-                    className="form-inline"
-                >
-                    <FormControl
-                        type="text"
-                        placeholder="Add New 
-                                     Ingredients Section
-                                     Name (e.g. 
-                                     Ingredients Needed
-                                     For The Filling)"
-                    />
-                    
-                    <button
-                        type="button"
-                        className="btn btn-default 
-                                   new-form-btn"
-                        aria-label="New Section"
-                    >
-                        <span
-                            className="glyphicon 
-                                       glyphicon-plus"
-                            aria-hidden="true"
-                        />
-                    </button>
-                    
-                </FormGroup>
+                                <FormGroup className="form-inline">
+                                    <FormControl
+                                        type="text"
+                                        placeholder="Add New 
+                                                     Ingredients Section
+                                                     Name (e.g. 
+                                                     Ingredients Needed
+                                                     For The Filling)"
+                                    />
+                                    
+                                    <button
+                                        type="button"
+                                        className="btn btn-default 
+                                                   new-form-btn"
+                                        aria-label="New Section"
+                                    >
+                                        <span
+                                            className="glyphicon 
+                                                       glyphicon-plus"
+                                            aria-hidden="true"
+                                        />
+                                    </button>
+                                    
+                                </FormGroup>
                             </Panel>
-
+                            
                             <Panel className="pastel-blue">
                                 {
                                     this.state.methodSections.valueSeq().map(
@@ -227,29 +240,29 @@ class RecipeModal extends React.Component {
                                         ))
                                 }
                 
-                <FormGroup className="form-inline">
-                    <FormControl
-                        className=""
-                        type="text"
-                        placeholder="Add New Method 
-                                     Section Name (e.g.
-                                     How To Make The 
-                                     Filling)"
-                    />
-                    
-                    <button
-                        type="button"
-                        className="btn btn-default 
-                                   new-form-btn"
-                        aria-label="New Section"
-                    >
-                        <span
-                            className="glyphicon 
-                                       glyphicon-plus"
-                            aria-hidden="true"
-                        />
-                    </button>
-                </FormGroup>
+                                <FormGroup className="form-inline">
+                                    <FormControl
+                                        className=""
+                                        type="text"
+                                        placeholder="Add New Method 
+                                                     Section Name (e.g.
+                                                     How To Make The 
+                                                     Filling)"
+                                    />
+                                    
+                                    <button
+                                        type="button"
+                                        className="btn btn-default 
+                                                   new-form-btn"
+                                        aria-label="New Section"
+                                    >
+                                        <span
+                                            className="glyphicon 
+                                                       glyphicon-plus"
+                                            aria-hidden="true"
+                                        />
+                                    </button>
+                                </FormGroup>
                             </Panel>
                         </form>
                     </Modal.Body>
@@ -261,7 +274,7 @@ class RecipeModal extends React.Component {
                         <Button onClick={this.addRecipe}>
                             Add Recipe
                         </Button>
-                        <Button onClick={this.props.close}>
+                        <Button onClick={this.clearForm}>
                             Clear Form
                         </Button>
                         

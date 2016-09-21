@@ -8,7 +8,7 @@ class Row extends React.Component {
         super(props);
 
         this.state = {
-            value: '',
+            value: this.props.value,
         };
         
         this.onChange = this.onChange.bind(this);

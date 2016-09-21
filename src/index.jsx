@@ -20,8 +20,8 @@ import './style.scss';
 const mapStateToProps = (state) => (
     {
         recipes: state.get('recipes'),
+        wipRecipe: state.get('wipRecipe'),  // Work In Progress Recipe
         fixHeader: state.get('fixHeader'),
-        modalVisibility: state.get('modalVisibility'),
     }
 );
 

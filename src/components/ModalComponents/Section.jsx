@@ -43,6 +43,7 @@ class Section extends React.Component {
                     type={this.props.type}
                     addItem={this.addItem}
                     switchRow={this.switchRow}
+                    value="test value"
                 />
             );
         }
