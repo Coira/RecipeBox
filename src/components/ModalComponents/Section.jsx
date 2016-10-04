@@ -1,76 +1,83 @@
 import React from 'react';
 import { List } from 'immutable';
-import { Button, FormGroup, Col,
-         FormControl, ControlLabel } from 'react-bootstrap';
+import { FormGroup, ControlLabel } from 'react-bootstrap';
 import Row from './Row';
 
 class Section extends React.Component {  
     constructor(props) {
         super(props);
 
-        this.state = {
-            count: 2,
-        };
-        
+        const rows = props.rows && props.rows.count() > 0 
+                   ? props.rows
+                   : new List(['']);
+                     
+        this.state = { rows };
         this.editValue = '';
-        this.items = new List();
         this.active = 0;
         this.addItem = this.addItem.bind(this);
-        this.switchRow = this.switchRow.bind(this);
-        //this.updateRecipe = this.updateRecipe.bind(this);
-        this.onBlur = this.onBlur.bind(this);
+        this.updateExtraRows = this.updateExtraRows.bind(this);
     }
 
-    onBlur() {
-        this.props.updateRecipe(this.props.index, this.items);
-    }
-
-    /*
-    updateParent() {
-        console.log(`${this.props.type} update parent`);
-        this.props.updateRecipe(this.props.name, this.items);
-    }
-    */
-    
-    createTable() {
-        const rows = [];
-        for (let i = 0; i < this.state.count; i++) {
-            rows.push(
-                <Row
-                    key={i}
-                    index={i}
-                    lastIndex={this.state.count}
-                    type={this.props.type}
-                    addItem={this.addItem}
-                    switchRow={this.switchRow}
-                    value="test value"
-                />
-            );
-        }
+    componentWillReceiveProps(nextProps) {
         
-        return (<div className="section-table flexCol">{rows}</div>);
+        if (nextProps.editing && nextProps.rows &&
+            nextProps.rows !== this.props.rows) {
+            // fill modal with recipe that the user is editing
+            this.setState({ rows: nextProps.rows.push('') });
+        }
+        else if (!nextProps.editing && this.props.editing) {
+            // user creating a new recipe -- clear form
+            this.clearForm();
+        }
     }
 
+    clearForm() {
+        this.setState({ rows: new List(['']) });
+    }
+    
     // add a Row's value to our array
     addItem(index, value) {
-        this.items = this.items.set(index, value);
+        if (this.state.rows.get(index) !== value) {
+            const rows = this.state.rows.set(index, value);
+            this.setState({ rows }, () => {
+                // remove any blank Rows, add Section to recipe
+                const cleaned = this.state.rows.filter(v => v);
+                this.props.updateRecipe(this.props.name, cleaned);
+            });
+        }
     }
 
     // if user has used a new Row, open up another Row for them
-    switchRow(index) {
-        if (this.state.count === 2 ||
-            (index >= this.state.count - 2 &&
-             this.items.get(this.state.count - 3))) {
-            this.setState({ count: this.state.count + 1 });
+    updateExtraRows(index, value) {
+        if (index === this.state.rows.count() - 1 && value) {
+            const rows = this.state.rows.set(index, value);
+            this.setState({ rows: rows.push('') });
         }
     }
     
     render() {
         return (
             <FormGroup onBlur={this.onBlur}>
-                <ControlLabel>Main {this.props.type}</ControlLabel>
-                {this.createTable()}
+                <ControlLabel>{this.props.name}</ControlLabel>
+                
+                <div className="section-table flexCol">
+                    {
+                        this.state.rows.map((v, i) => (
+                            <Row
+                                key={`${this.props.uniqueId}-row-${i}`}
+                                uniqueId={`${this.props.uniqueId}-row-${i}`}
+                                index={i}
+                                type={this.props.type}
+                                addItem={this.addItem}
+                                updateExtraRows={this.updateExtraRows}
+                                value={v}
+                            />
+                        ))
+                    }
+                </div>
+   
             </FormGroup>
+            
         );
     }
 }

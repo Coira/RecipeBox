@@ -13,9 +13,10 @@ const Recipe = (props) => {
     if (props.recipe) {
         const recipe = props.recipe;
         const img = imgUrl + (recipe.img ? recipe.img : 'generic.jpeg');
-        const ingredientCategories = Object.keys(recipe.ingredients);
-        const methodCategories = Object.keys(recipe.method);
+        const ingredientCategories = Object.keys(recipe.ingredientSections);
+        const methodCategories = Object.keys(recipe.methodSections);
 
+        console.log(JSON.stringify(recipe.ingredientSections));
         return (
             <div className="recipeCont">
                 <div className="recipe flexCol">
@@ -34,7 +35,7 @@ const Recipe = (props) => {
                                         <ul>
                                             {
                                                 
-                                                recipe.ingredients[category]
+                                                recipe.ingredientSections[category]
                                                       .map((item, rkey) => (
                                                           <div
                                                               className="item"
@@ -57,7 +58,7 @@ const Recipe = (props) => {
                                         <div className="catTitle"> {titlise(category)} </div>
                                         <ol>
                                             {
-                                                recipe.method[category]
+                                                recipe.methodSections[category]
                                                       .map((instruction, rkey) => (
                                                           <div
                                                               className="instruction"

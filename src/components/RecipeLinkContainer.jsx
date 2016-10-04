@@ -7,7 +7,6 @@ const recipesDefault = new Map();
 const RecipeLinkContainer = ({ rps, editFtn, deleteFtn }) => {
     const recipes = rps || recipesDefault;
     const sortedRecipes = recipes.sortBy(recipe => recipe.url);
-    console.log(typeof editFtn);
     return (
         <div id="recipeLinkContainer">
             {

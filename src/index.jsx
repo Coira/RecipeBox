@@ -21,6 +21,7 @@ const mapStateToProps = (state) => (
     {
         recipes: state.get('recipes'),
         wipRecipe: state.get('wipRecipe'),  // Work In Progress Recipe
+        editing: state.get('editing'),
         fixHeader: state.get('fixHeader'),
     }
 );

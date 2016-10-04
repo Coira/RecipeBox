@@ -7,7 +7,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
-        this.showRecipeModal = this.showRecipeModal.bind(this);
+        //this.showRecipeModal = this.showRecipeModal.bind(this);
         this.addRecipe = this.addRecipe.bind(this);
         this.close = this.close.bind(this);
 
@@ -51,8 +51,6 @@ class App extends React.Component {
 
     // user clicks on 'Add' in recipe modal -- add new recipe to state
     addRecipe(recipe) {
-        $('.modal').hide();
-
         const id = localStorage.getItem('nextId');
         
         const newRecipe = recipe;
@@ -66,13 +64,6 @@ class App extends React.Component {
         const recipes = JSON.parse(localStorage.getItem('recipes'));
         recipes.push(newRecipe);
         localStorage.setItem('recipes', JSON.stringify(recipes));
-    }
-    
-    // user clicks the 'add recipe ' link in titlebar -- show recipe modal
-    showRecipeModal() {
-        //this.actions.setShowRecipeModal(true);
-        $('.modal').show();
-        $('.autofocus').focus();
     }
     
     // creates a unique url from a recipe name
@@ -100,7 +91,6 @@ class App extends React.Component {
 
     // close modal -- cancel and delete recipe input?
     close() {
-        //this.actions.setShowRecipeModal(false);
         $('.modal').hide();
     }
 
@@ -109,7 +99,7 @@ class App extends React.Component {
             <div>
                 <Titlebar
                     fixHeader={this.props.fixHeader}
-                    onAdd={this.showRecipeModal}
+                    onAdd={this.actions.newRecipe}
                 />
                 
                 <RecipeModal
@@ -118,6 +108,7 @@ class App extends React.Component {
                     removeRecipe={this.removeRecipe}
                     close={this.close}
                     enforceFocus={false}
+                    editing={this.props.editing}
                     wipRecipe={this.props.wipRecipe}
                 /> 
                 
