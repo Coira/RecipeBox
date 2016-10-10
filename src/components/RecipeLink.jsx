@@ -1,8 +1,6 @@
 import React from 'react';
 import NavLink from './NavLink';
 
-const imgUrl = '/imgs/';
-
 const RecipeLink = ({ name, prepTime, cookTime, serves, img, url,
                       editFtn, deleteFtn }) => (
                           
@@ -11,7 +9,7 @@ const RecipeLink = ({ name, prepTime, cookTime, serves, img, url,
             <NavLink to={`/recipes/${url}`}>
                 <div className="foodImg">
                     <img
-                        src={imgUrl + (img || 'generic.jpeg')}
+                        src={img}
                         height="150"
                         width="150"
                         alt="food_pic"

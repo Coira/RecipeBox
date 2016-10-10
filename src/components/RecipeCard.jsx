@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const imgUrl = '/imgs/';
-
 // Makes every word start with a capital letter
 function titlise(title) {
     return (title.split(' ').map((word) =>
@@ -12,7 +10,7 @@ function titlise(title) {
 const Recipe = (props) => {
     if (props.recipe) {
         const recipe = props.recipe;
-        const img = imgUrl + (recipe.img ? recipe.img : 'generic.jpeg');
+        const img = recipe.img ? recipe.img : 'generic.jpeg';
         const ingredientCategories = Object.keys(recipe.ingredientSections);
         const methodCategories = Object.keys(recipe.methodSections);
 

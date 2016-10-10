@@ -1,7 +1,7 @@
 {
 	"recipes": [
 		{
-			"name": "Garlic mushroom frittata",
+			"name": "Garlic mushroom frittata1",
 			"prep_time": "less than 30 mins",
 			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
@@ -33,7 +33,7 @@
 			"cook_time": "10 to 30 mins",
 			"oven_temp": "",
 			"serves": 2,
-			"img": "apples-kiwi-oranges-fruit-51335.jpg",
+			"img": "apples-kiwi-oranges-fruit-51335.jpeg",
 			"ingredientSections": {
 				"Main Ingredients": ["spray olive oil",
 						 "2 chicken breasts, skinless and trimmed (200g/7oz each)",
@@ -107,9 +107,10 @@
 			}
 		},
 				{
-			"name": "Garlic mushroom frittata",
+			"name": "Garlic mushroom frittata2",
 			"prep_time": "less than 30 mins",
 			"oven_temp": "",
+			"img": "generic.jpeg",
 			"serves": 5,
 			"ingredientSections": {
 				"Main Ingredients":	["cooking spray",

@@ -3,6 +3,8 @@ import Titlebar from './TitleBar';
 import RecipeModal from './RecipeModal';
 import Footer from './Footer';
 
+const imgPath = '/imgs/';
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -13,6 +15,8 @@ class App extends React.Component {
 
         this.actions = this.props.actions;
         this.urls = [];
+        this.imgs = [];
+        
     } 
 
     
@@ -29,6 +33,8 @@ class App extends React.Component {
                     const nextRecipe = recipe;
                     nextRecipe.url = this.urlise(recipe.name);
                     nextRecipe.id = index;
+                    nextRecipe.img = imgPath + recipe.img;
+                    
                     urlisedRecipes.push(nextRecipe);
                     this.actions.addRecipe(nextRecipe);
                 });
@@ -51,12 +57,9 @@ class App extends React.Component {
 
     // user clicks on 'Add' in recipe modal -- add new recipe to state
     addRecipe(recipe) {
-        const id = localStorage.getItem('nextId');
-        
         const newRecipe = recipe;
         newRecipe.url = this.urlise(recipe.name);
-        newRecipe.img = "food-eggs.jpg";
-
+        console.log(newRecipe.img);
         // add recipe to state
         this.actions.addRecipe(newRecipe);
 
@@ -101,7 +104,7 @@ class App extends React.Component {
                     fixHeader={this.props.fixHeader}
                     onAdd={this.actions.newRecipe}
                 />
-                
+                    
                 <RecipeModal
                     className="modal"
                     addRecipe={this.addRecipe}

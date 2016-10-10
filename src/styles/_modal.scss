@@ -60,6 +60,25 @@
         /* margin: 10 10 10 10;*/
     }
 
+    .spaced {
+        margin-top: 20px;
+    }
+
+    .imgList {
+        border: 1px solid gray;
+        margin: 5 5 5 5;
+        transition: box-shadow 0.3s;
+    }
+    
+    .imgList:hover {
+        box-shadow: 1px 5px 5px 2px rgba(0,0,0,0.4);
+    }
+
+    .imgList:active {
+        /*box-shadow: none;*/
+        border: 2px solid gray;
+    }
+    
 }
 
 	

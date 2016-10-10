@@ -5,6 +5,14 @@ import { Button, FormGroup, Panel, Modal,
 import Draggable from 'react-draggable';
 import Section from './ModalComponents/Section';
 
+const imgPath = '/imgs/';
+const imgList = [['apples-kiwi-oranges-fruit-51335.jpeg', 'fruit'],
+                 ['food-colorful-dessert-sweet.jpg', 'cupcakes'],
+                 ['food-dinner-lunch-meal.jpg', 'pasta'],
+                 ['food-eggs.jpg', 'eggs'],
+                 ['generic.jpg', 'vine tomatoes and olive oil'],
+                 ['vegetables-italian-pizza-restaurant.jpg', 'pizza']];
+
 class RecipeModal extends React.Component {
     
     constructor(props) {
@@ -13,6 +21,7 @@ class RecipeModal extends React.Component {
         // ingredients/method, so each section keeps track of its own elements
         this.state = {
             name: '',
+            img: `${imgPath}generic.jpeg`,           
             servings: '',
             cookTime: '',
             prepTime: '',
@@ -35,6 +44,8 @@ class RecipeModal extends React.Component {
         this.editMethodSectionName = this.editMethodSectionName.bind(this);
         this.editIngredientSectionName =
             this.editIngredientSectionName.bind(this);
+        this.editImgUrl = this.editImgUrl.bind(this);
+        this.chooseImage = this.chooseImage.bind(this);
     }
 
 
@@ -54,6 +65,7 @@ class RecipeModal extends React.Component {
                             servings: serves,
                             cookTime: cook_time,
                             prepTime: prep_time,
+                            img: wipRecipe.img,
                             ingSectionName: '',
                             methodSectionName: '',
                             ingredientSections: fromJS(ingredients),
@@ -72,6 +84,7 @@ class RecipeModal extends React.Component {
                         servings: '',
                         cookTime: '',
                         prepTime: '',
+                        img: `${imgPath}generic.jpeg`,
                         ingSectionName: '',
                         methodSectionName: '',
                         ingredientSections: fromJS({ 'Main Ingredients': [] }),
@@ -102,7 +115,10 @@ class RecipeModal extends React.Component {
     editMethodSectionName(event) {
         this.setState({ methodSectionName: event.target.value });
     }
-    
+
+    editImgUrl(event) {
+        this.setState({ img: event.target.value });
+    }
 
     addSection(type) {
         let sectionContainer = null;
@@ -137,6 +153,7 @@ class RecipeModal extends React.Component {
     }
 
     addRecipe() {
+        // ingredients sections
         const ingredients = {};
         this.state.ingredientSections.forEach((list, name) => {
             ingredients[name] = [];
@@ -145,6 +162,7 @@ class RecipeModal extends React.Component {
             });
         });
 
+        // method sections
         const method = {};
         this.state.methodSections.forEach((list, name) => {
             method[name] = [];
@@ -158,6 +176,7 @@ class RecipeModal extends React.Component {
             serves: this.state.servings,
             prep_time: this.state.prepTime,
             cook_time: this.state.cookTime,
+            img: this.state.img,
             oven_temp: '',
             ingredientSections: ingredients,
             methodSections: method,
@@ -176,6 +195,10 @@ class RecipeModal extends React.Component {
         this.setState({ methodSections: sections });
     }
 
+    chooseImage(index) {
+        this.setState({ img: imgPath + imgList[index][0] });
+    }
+    
     render() {
         return (
             <Draggable handle=".modal-header">
@@ -191,8 +214,7 @@ class RecipeModal extends React.Component {
                             
                             <Panel className="pastel-red">
                                 <FormGroup
-                                    className="flexCols 
-                                               verticallyCentered"
+                                    className="verticallyCentered"
                                 >
                                     <ControlLabel>Name</ControlLabel>
                                     <FormControl
@@ -205,6 +227,57 @@ class RecipeModal extends React.Component {
                                     />
                                 </FormGroup>
                             </Panel>
+
+                            <Panel className="pastel-red flexCol">
+                                <FormGroup>
+                                    <ControlLabel>Image</ControlLabel>
+                                    <div>
+                                        <img
+                                            src={this.state.img}
+                                            alt="food_pic"
+                                            width="100"
+                                            height="100"
+                                        />
+                                    </div>
+
+                                    <div className="spaced">
+                                        <div> If you have an image of your recipe, paste its url here. </div>
+                                        <FormControl
+                                            className="long-input"
+                                            value={this.state.img}
+                                            type="text"
+                                            onChange={this.editImgUrl}
+                                            placeholder="Link to image"
+                                        />
+                                    </div>
+                                    
+                                    <div className="spaced"> 
+                                        <div> If you don't have an image, but
+                                            would like to use one of my
+                                            defaults, you can choose one here.
+                                        </div>
+                                        <button onClick={this.viewImages}>
+                                            Choose an image
+                                        </button>
+                                        <div>
+                                            {
+                                                imgList.map(([imgName, altText], index) => (
+                                                    <img
+                                                        className="imgList"
+                                                        src={imgPath + imgName}
+                                                        alt={altText}
+                                                        width="80"
+                                                        height="80"
+                                                        key={`img-${imgName}`}
+                                                        onClick={() => this.chooseImage(index)}
+                                                    />
+                                                ))
+                                            }
+                                        </div>
+                                    </div>
+                                </FormGroup>
+                            </Panel>
+                            
                             <Panel className="pastel-green">
                                 
                                 <div className="info"><b>
