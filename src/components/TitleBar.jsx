@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import NavLink from './NavLink';
 
 class TitleBar extends React.Component {
     constructor(props) {
@@ -24,7 +25,11 @@ class TitleBar extends React.Component {
                         className={classnames({ fixedHeader: this.props.fixHeader },
                                               'titleLinks')}
                     >
-                        <div className="link" onClick={this.onHome}>Home</div>
+                        <NavLink to={'/'}>
+                            <div className="link">
+                                Home
+                            </div>
+                        </NavLink>
                         <div
                             className="link"
                             onClick={this.props.onAdd}

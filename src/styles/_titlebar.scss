@@ -36,11 +36,21 @@
 	font-family: 'EB Garamond', serif;
 	font-size: 26px;
 	font-weight: bold;
-	
-	.link {
+        cursor: hand;
 
+        a:visited { color: #2a2a2a; }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+	.link {
+            cursor: pointer;
 	    margin: 0 20 0 20;
+            
 	}
+
+        .link:hover { text-decoration: underline; }
     }
 
 }

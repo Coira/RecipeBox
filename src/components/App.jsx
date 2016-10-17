@@ -44,6 +44,7 @@ class App extends React.Component {
         else {
             // get recipes from local storage, add them to state
             const storedRecipes = JSON.parse(localStorage.getItem('recipes'));
+            console.log(storedRecipes);
             storedRecipes.forEach((recipe) => {
                 this.actions.addRecipe(recipe);
             });
@@ -59,16 +60,9 @@ class App extends React.Component {
     addRecipe(recipe) {
         const newRecipe = recipe;
         newRecipe.url = this.urlise(recipe.name);
-        console.log(newRecipe.img);
-        // add recipe to state
         this.actions.addRecipe(newRecipe);
-
-        // add recipe to local storage
-        const recipes = JSON.parse(localStorage.getItem('recipes'));
-        recipes.push(newRecipe);
-        localStorage.setItem('recipes', JSON.stringify(recipes));
     }
-    
+
     // creates a unique url from a recipe name
     urlise(name) {
         const urlFromName = name.replace(/[^a-zA-Z0-9 ]/g, '')
@@ -113,6 +107,7 @@ class App extends React.Component {
                     enforceFocus={false}
                     editing={this.props.editing}
                     wipRecipe={this.props.wipRecipe}
+                    deleteFtn={this.actions.deleteRecipe}
                 /> 
                 
                 {this.props.children}

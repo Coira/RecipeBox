@@ -54,18 +54,6 @@ class Row extends React.Component {
                     rows="1"
                    
                 />
-
-                <button
-                    type="button"
-                    className="btn btn-default delete-element"
-                    aria-label="Delete Element"
-                    tabIndex="-1"
-                >
-                    <span
-                        className="glyphicon glyphicon-minus"
-                        aria-hidden="true"
-                    />
-                </button>
             </div>
         );
     }

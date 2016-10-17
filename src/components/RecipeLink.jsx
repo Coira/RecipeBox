@@ -1,4 +1,5 @@
 import React from 'react';
+import { ButtonToolbar, Button } from 'react-bootstrap';
 import NavLink from './NavLink';
 
 const RecipeLink = ({ name, prepTime, cookTime, serves, img, url,
@@ -18,7 +19,9 @@ const RecipeLink = ({ name, prepTime, cookTime, serves, img, url,
             </NavLink>
             <div className="text flexCol">
                 <div className="top">
-                    <div className="title">{name}</div>
+                    <NavLink to={`/recipes/${url}`}>
+                        <div className="title">{name}</div>
+                    </NavLink>
                     <div className="serves">
                         {serves ? `Serves: ${serves}` : ''}</div>
                 </div>
@@ -34,18 +37,25 @@ const RecipeLink = ({ name, prepTime, cookTime, serves, img, url,
         </div>
         
         <div className="iconCont flexRow">
-            <div className="icon">E</div>
-            <div className="icon">D</div>
-            <button
-                onClick={() => {
-                    editFtn(url);
-                }}
-            >b</button>
-            <button
-                onClick={() => {
-                    deleteFtn(url);
-                }}
-            >d</button>
+            <ButtonToolbar>
+                <Button
+                    bsStyle="primary"
+                    onClick={
+                        () => {
+                            editFtn(url);
+                        }}
+                >
+                    Edit
+                </Button>
+                
+                <Button
+                    bsStyle="danger"
+                    onClick={
+                        () => {
+                            deleteFtn(url);
+                        }}
+                >Delete</Button>
+            </ButtonToolbar>
         </div>
         
     </div>

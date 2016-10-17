@@ -1,6 +1,6 @@
 import React from 'react';
 import { List, fromJS } from 'immutable';
-import { Button, FormGroup, Panel, Modal, 
+import { ButtonToolbar, Button, FormGroup, Panel, Modal, 
          FormControl, ControlLabel } from 'react-bootstrap';
 import Draggable from 'react-draggable';
 import Section from './ModalComponents/Section';
@@ -36,7 +36,9 @@ class RecipeModal extends React.Component {
         this.editCookTime = this.editCookTime.bind(this);
         this.editPrepTime = this.editPrepTime.bind(this);
         this.clearForm = this.clearForm.bind(this);
+        this.undoChanges = this.undoChanges.bind(this);
         this.addRecipe = this.addRecipe.bind(this);
+        this.updateRecipe = this.updateRecipe.bind(this);
         this.updateIngredients = this.updateIngredients.bind(this);
         this.updateMethod = this.updateMethod.bind(this);
         this.addIngredientSection = this.addSection.bind(this, 'ingredients');
@@ -89,6 +91,27 @@ class RecipeModal extends React.Component {
                         methodSectionName: '',
                         ingredientSections: fromJS({ 'Main Ingredients': [] }),
                         methodSections: fromJS({ 'Main Method': [] }),
+        });
+    }
+
+    undoChanges() {
+        const wipRecipe = this.props.wipRecipe;
+        const {
+            name = '', serves = '', cook_time = '', prep_time = '',
+        } = wipRecipe;
+
+        const ingredients = wipRecipe.ingredientSections || {};
+        const method = wipRecipe.methodSections || {};
+        
+        this.setState({ name,
+                        servings: serves,
+                        cookTime: cook_time,
+                        prepTime: prep_time,
+                        img: wipRecipe.img,
+                        ingSectionName: '',
+                        methodSectionName: '',
+                        ingredientSections: fromJS(ingredients),
+                        methodSections: fromJS(method),
         });
     }
     
@@ -183,8 +206,16 @@ class RecipeModal extends React.Component {
         };
 
         this.props.addRecipe(recipe);
+        this.clearForm();
     }
 
+    updateRecipe() {
+        // update an old recipe
+        const oldRecipeKey = this.props.wipRecipe.url;
+        this.props.deleteFtn(oldRecipeKey);
+        this.addRecipe();
+    }
+    
     updateIngredients(name, items) {
         const sections = this.state.ingredientSections.set(name, items);
         this.setState({ ingredientSections: sections });
@@ -429,15 +460,35 @@ class RecipeModal extends React.Component {
                     </Modal.Body>
                     
                     <Modal.Footer>
-                        <Button onClick={this.props.close}>
-                            Close
-                        </Button>
-                        <Button onClick={this.addRecipe}>
-                            Add Recipe
-                        </Button>
-                        <Button onClick={this.clearForm}>
-                            Clear Form
-                        </Button>
+                        {
+                            this.props.editing ?
+                            
+                            <div>
+                                <Button onClick={this.props.close}>
+                                    Close
+                                </Button>
+                                <Button onClick={this.updateRecipe}>
+                                    Update Recipe
+                                </Button>
+                                <Button onClick={this.undoChanges}>
+                                    Undo Changes
+                                </Button>
+                            </div>
+                            
+                            :
+                            
+                            <div>
+                                <Button onClick={this.props.close}>
+                                    Close
+                                </Button>
+                                <Button onClick={this.addRecipe}>
+                                    Add Recipe
+                                </Button>
+                                <Button onClick={this.clearForm}>
+                                    Clear Form
+                                </Button>
+                            </div>
+                        }
                         
                     </Modal.Footer>
                     
