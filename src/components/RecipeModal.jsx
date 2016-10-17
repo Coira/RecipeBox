@@ -1,17 +1,32 @@
 import React from 'react';
 import { List, fromJS } from 'immutable';
-import { ButtonToolbar, Button, FormGroup, Panel, Modal, 
+import { Button, FormGroup, Panel, Modal, 
          FormControl, ControlLabel } from 'react-bootstrap';
 import Draggable from 'react-draggable';
 import Section from './ModalComponents/Section';
 
 const imgPath = '/imgs/';
-const imgList = [['apples-kiwi-oranges-fruit-51335.jpeg', 'fruit'],
-                 ['food-colorful-dessert-sweet.jpg', 'cupcakes'],
-                 ['food-dinner-lunch-meal.jpg', 'pasta'],
-                 ['food-eggs.jpg', 'eggs'],
-                 ['generic.jpg', 'vine tomatoes and olive oil'],
-                 ['vegetables-italian-pizza-restaurant.jpg', 'pizza']];
+const imgList = [['bread.jpeg', 'bread'],
+                 ['breakfast.jpg', 'croissants'],
+                 ['burger-chips.jpeg', 'burger and chips'],
+                 ['cake.jpeg', 'cake'],
+                 ['chicken.jpeg', 'chicken legs'],
+                 ['coffee.jpeg', 'coffee and coffee beans'],
+                 ['crayfish.jpeg', 'crayfish'],
+                 ['cream-slice.jpeg', 'cream slice'],
+                 ['default.jpg', 'hot pan on the stove'],
+                 ['eggs.jpg', 'eggs'],
+                 ['fruit.jpeg', 'fruit'],
+                 ['hot-drink.jpeg', 'hot drink'],
+                 ['meat-dish.jpg', 'meat dish'],
+                 ['noodles.jpg', 'noodles'],
+                 ['pasta.jpg', 'pasta'],
+                 ['pizza.jpg', 'pizza'],
+                 ['red-meat.jpeg', 'red meat'],
+                 ['soup.jpg', '3 soup dishes'],
+                 ['spaghetti.jpeg', 'uncooked spaghetti'],
+                 ['tomatoes-oil.jpeg', 'tomatoes and oil'],
+                 ['wine.jpeg', 'glass of red and white wine']];
 
 class RecipeModal extends React.Component {
     
@@ -21,7 +36,7 @@ class RecipeModal extends React.Component {
         // ingredients/method, so each section keeps track of its own elements
         this.state = {
             name: '',
-            img: `${imgPath}generic.jpeg`,           
+            img: `${imgPath}default.jpeg`,           
             servings: '',
             cookTime: '',
             prepTime: '',
@@ -86,7 +101,7 @@ class RecipeModal extends React.Component {
                         servings: '',
                         cookTime: '',
                         prepTime: '',
-                        img: `${imgPath}generic.jpeg`,
+                        img: `${imgPath}default.jpeg`,
                         ingSectionName: '',
                         methodSectionName: '',
                         ingredientSections: fromJS({ 'Main Ingredients': [] }),
@@ -266,7 +281,7 @@ class RecipeModal extends React.Component {
                                         <img
                                             src={this.state.img}
                                             alt="food_pic"
-                                            width="100"
+                                            width="150"
                                             height="100"
                                         />
                                     </div>

@@ -11,8 +11,8 @@ const RecipeLink = ({ name, prepTime, cookTime, serves, img, url,
                 <div className="foodImg">
                     <img
                         src={img}
-                        height="150"
-                        width="150"
+                        height="130"
+                        width="180"
                         alt="food_pic"
                     />
                 </div>
