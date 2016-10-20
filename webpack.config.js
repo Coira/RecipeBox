@@ -4,7 +4,7 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/only-dev-server',
-        './src/index.jsx'
+        './src'
     ],
     module: {
         loaders: [
@@ -22,6 +22,7 @@ module.exports = {
             loader: 'style!css!sass'
        }]
     },
+	devtool: 'cheap-module-source-map',
     resolve: {
         extensions: ['', '.js', '.jsx']
     },
@@ -34,7 +35,18 @@ module.exports = {
         contentBase: './dist',
         hot: true
     },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ]
+   plugins: [
+	new webpack.optimize.UglifyJsPlugin({
+		compress: {
+			warnings: false
+		}
+	}),
+	new webpack.optimize.AggressiveMergingPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+	new webpack.DefinePlugin({
+		'process.env': {
+			'NODE_ENV': JSON.stringify('production')
+		}
+	})
+   ]
 };
