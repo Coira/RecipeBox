@@ -27,7 +27,8 @@ class Row extends React.Component {
     }
     
     onChange(event) {
-        // if this Row has gone from being empty to having a value, let parent know
+        // if this Row has gone from being empty to having a value,
+        // let parent know
         if (this.state.value === '' && event.target.value) {
             this.props.updateExtraRows(this.props.index, event.target.value);
         }
@@ -59,5 +60,14 @@ class Row extends React.Component {
     }
     
 }
+
+Row.propTypes = {
+    value: React.PropTypes.string,
+    updateExtraRows: React.PropTypes.func,
+    addItem: React.PropTypes.func,
+    uniqueId: React.PropTypes.string,
+    type: React.PropTypes.string,
+    index: React.PropTypes.number,
+};
 
 export default Row;

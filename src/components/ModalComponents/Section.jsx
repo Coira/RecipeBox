@@ -7,10 +7,8 @@ class Section extends React.Component {
     constructor(props) {
         super(props);
 
-        const rows = props.rows && props.rows.count() > 0 
-                   ? props.rows
-                   : new List(['']);
-                     
+        const rows = props.rows;
+        
         this.state = { rows };
         this.editValue = '';
         this.active = 0;
@@ -19,15 +17,11 @@ class Section extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        
-        if (nextProps.editing && nextProps.rows &&
-            nextProps.rows !== this.props.rows) {
-            // fill modal with recipe that the user is editing
+        if (nextProps.rows.last() !== '') {
             this.setState({ rows: nextProps.rows.push('') });
         }
-        else if (!nextProps.editing && this.props.editing) {
-            // user creating a new recipe -- clear form
-            this.clearForm();
+        else {
+            this.setState({ rows: nextProps.rows });
         }
     }
 
@@ -82,5 +76,13 @@ class Section extends React.Component {
     }
 }
 
+Section.propTypes = {
+    rows: React.PropTypes.object,
+    editing: React.PropTypes.bool,
+    updateRecipe: React.PropTypes.func,
+    name: React.PropTypes.string,
+    uniqueId: React.PropTypes.string,
+    type: React.PropTypes.string,
+};
 export default Section;
 

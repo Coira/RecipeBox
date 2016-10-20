@@ -6,7 +6,7 @@
 			"cook_time": "35 minutes",
 			"oven_temp": "Gas mark 5",
 			"serves": "Makes 12 slices",
-			"img": "food-eggs.jpg",
+			"img": "cake.jpeg",
 			"ingredientSections": {
 				"Main Ingredients": ["3 or 4 eggs", 
 									 "Approx. 200g caster sugar", 
@@ -42,6 +42,7 @@
 			"oven_temp": "Gas mark 6",
 			"cook_time": "35 minutes",
 			"serves": "Serves 4",
+			"img": "chicken.jpeg",
 			"ingredientSections": {
 				"Main Ingredients": ["1 cooked chicken (about 400g)", 
 									 "1 chopped onion",
@@ -77,6 +78,7 @@
 			"cook_time": "30 to 40 minutes",
 			"serves": "Serves 4",
 			"oven_temp": "Gas mark 5",
+			"img": "fruit.jpeg",
 			"ingredientSections": {
 				"Main Ingredients": [
 					"3 or 4 medium dessert apples, e.g. Bramley",
@@ -107,6 +109,7 @@
 			"cook_time": "20 minutes",
 			"oven_temp": "Gas mark 6",
 			"serves": "6 to 8",
+			"img": "spaghetti.jpeg",
 			"ingredientSections": {
 				"Main Ingredients": [
 					"500g of minced beef",

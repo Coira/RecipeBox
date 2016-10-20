@@ -9,16 +9,13 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
-        //this.showRecipeModal = this.showRecipeModal.bind(this);
         this.addRecipe = this.addRecipe.bind(this);
         this.close = this.close.bind(this);
 
         this.actions = this.props.actions;
         this.urls = [];
         this.imgs = [];
-        
     } 
-
     
     componentDidMount() {
         $('.modal').hide();
@@ -44,7 +41,6 @@ class App extends React.Component {
         else {
             // get recipes from local storage, add them to state
             const storedRecipes = JSON.parse(localStorage.getItem('recipes'));
-            console.log(storedRecipes);
             storedRecipes.forEach((recipe) => {
                 this.actions.addRecipe(recipe);
             });
@@ -117,5 +113,13 @@ class App extends React.Component {
         );
     }
 }
+
+App.propTypes = {
+    actions: React.PropTypes.object,
+    fixHeader: React.PropTypes.bool,
+    editing: React.PropTypes.bool,
+    wipRecipe: React.PropTypes.object,
+    children: React.PropTypes.object,
+};
 
 export default App;

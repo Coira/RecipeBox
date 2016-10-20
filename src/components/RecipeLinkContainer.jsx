@@ -29,10 +29,10 @@ const RecipeLinkContainer = ({ rps, editFtn, deleteFtn }) => {
 };
 
 
-/*
-   RecipeLinkContainer.propTypes = {
-   recipes: React.PropTypes.array.isRequired
-   };
- */
+RecipeLinkContainer.propTypes = {
+    rps: React.PropTypes.object,
+    editFtn: React.PropTypes.func,
+    deleteFtn: React.PropTypes.func,
+};
 
 export default RecipeLinkContainer;

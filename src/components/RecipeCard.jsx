@@ -14,25 +14,35 @@ const Recipe = (props) => {
         const ingredientCategories = Object.keys(recipe.ingredientSections);
         const methodCategories = Object.keys(recipe.methodSections);
 
-        console.log(JSON.stringify(recipe.ingredientSections));
         return (
             <div className="recipeCont">
                 <div className="recipe flexCol">
                     
                     <div className="titleItems flexRow">
-                        <img src={img} alt="food_pic" width="120" height="120" />
-                        <div className="recipeTitle">{titlise(recipe.name)}</div>
+                        <img
+                            src={img}
+                            alt="food_pic"
+                            width="120"
+                            height="120"
+                        />
+                        <div className="recipeTitle">
+                            {titlise(recipe.name)}
+                        </div>
                     </div>
                     
                     <div className="contents contentsLayout">
                         <div className="ingredientsPanel">
                             {
                                 ingredientCategories.map((category, ikey) => (
-                                    <div className="category" key={`icat${ikey}`}>
-                                        <div className="catTitle"> {titlise(category)} </div>
+                                    <div
+                                        className="category"
+                                        key={`icat${ikey}`}
+                                    >
+                                        <div className="catTitle">
+                                            {titlise(category)}
+                                        </div>
                                         <ul>
                                             {
-                                                
                                                 recipe.ingredientSections[category]
                                                       .map((item, rkey) => (
                                                           <div
@@ -52,8 +62,13 @@ const Recipe = (props) => {
                         <div className="methodPanel">
                             {
                                 methodCategories.map((category, key) => (
-                                    <div className="category" key={`mcat${key}`}>
-                                        <div className="catTitle"> {titlise(category)} </div>
+                                    <div
+                                        className="category"
+                                        key={`mcat${key}`}
+                                    >
+                                        <div className="catTitle">
+                                            {titlise(category)}
+                                        </div>
                                         <ol>
                                             {
                                                 recipe.methodSections[category]

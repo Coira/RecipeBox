@@ -12,7 +12,7 @@ export default function reducer(state = defaultState, action) {
             // open the modal so user can input a new recipe
             $('.modal').show();
             $('.autofocus').focus();
-            //const nextState = state.set('wipRecipe', {});
+
             return state.set('wipRecipe', {})
                         .set('editing', false);
         }

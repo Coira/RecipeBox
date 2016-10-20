@@ -36,14 +36,14 @@ class RecipeModal extends React.Component {
         // ingredients/method, so each section keeps track of its own elements
         this.state = {
             name: '',
-            img: `${imgPath}default.jpeg`,           
+            img: `${imgPath}default.jpg`,           
             servings: '',
             cookTime: '',
             prepTime: '',
             ingSectionName: '',
             methodSectionName: '', 
-            ingredientSections: fromJS({ 'Main Ingredients': [] }),
-            methodSections: fromJS({ 'Main Method': [] }),
+            ingredientSections: fromJS({ 'Main Ingredients': [''] }),
+            methodSections: fromJS({ 'Main Method': [''] }),
         };
 
         this.editName = this.editName.bind(this);
@@ -101,22 +101,23 @@ class RecipeModal extends React.Component {
                         servings: '',
                         cookTime: '',
                         prepTime: '',
-                        img: `${imgPath}default.jpeg`,
+                        img: `${imgPath}default.jpg`,
                         ingSectionName: '',
                         methodSectionName: '',
-                        ingredientSections: fromJS({ 'Main Ingredients': [] }),
-                        methodSections: fromJS({ 'Main Method': [] }),
+                        ingredientSections: fromJS({ 'Main Ingredients': ['']}),
+                        methodSections: fromJS({ 'Main Method': ['']}),
         });
     }
 
+    // reverts changes made when editing a recipe
     undoChanges() {
         const wipRecipe = this.props.wipRecipe;
         const {
             name = '', serves = '', cook_time = '', prep_time = '',
         } = wipRecipe;
 
-        const ingredients = wipRecipe.ingredientSections || {};
-        const method = wipRecipe.methodSections || {};
+        const ingredients = wipRecipe.ingredientSections || { 'Main Ingredients': [''] };
+        const method = wipRecipe.methodSections || { 'Main Method': [''] };
         
         this.setState({ name,
                         servings: serves,
@@ -158,6 +159,7 @@ class RecipeModal extends React.Component {
         this.setState({ img: event.target.value });
     }
 
+    // add an ingredient or method section
     addSection(type) {
         let sectionContainer = null;
         let name = '';
@@ -174,7 +176,7 @@ class RecipeModal extends React.Component {
         // don't allow unnamed sections
         if (!name) return;
         
-        const sections = sectionContainer.set(name, new List());
+        const sections = sectionContainer.set(name, new List(['']));
 
         if (type === 'ingredients') {
             this.setState({
@@ -190,6 +192,7 @@ class RecipeModal extends React.Component {
         }
     }
 
+    // add recipe to storage
     addRecipe() {
         // ingredients sections
         const ingredients = {};
@@ -224,8 +227,8 @@ class RecipeModal extends React.Component {
         this.clearForm();
     }
 
+    // save changes made to an edited recipe
     updateRecipe() {
-        // update an old recipe
         const oldRecipeKey = this.props.wipRecipe.url;
         this.props.deleteFtn(oldRecipeKey);
         this.addRecipe();
@@ -241,6 +244,8 @@ class RecipeModal extends React.Component {
         this.setState({ methodSections: sections });
     }
 
+    // attached to the images section -- user choose an image to
+    // represent the recipe
     chooseImage(index) {
         this.setState({ img: imgPath + imgList[index][0] });
     }
@@ -287,7 +292,9 @@ class RecipeModal extends React.Component {
                                     </div>
 
                                     <div className="spaced">
-                                        <div> If you have an image of your recipe, paste its url here. </div>
+                                        <div> If you have an image of your
+                                            recipe, paste its url here.
+                                        </div>
                                         <FormControl
                                             className="long-input"
                                             value={this.state.img}
@@ -397,33 +404,32 @@ class RecipeModal extends React.Component {
                                             ))
                                 }
                 
-                <FormGroup className="form-inline">
-                    <FormControl
-                        type="text"
-                        placeholder="Add New 
-                                     Ingredients Section
-                                     Name (e.g. 
-                                     Ingredients Needed
-                                     For The Filling)"
-                        value={this.state.ingSectionName}
-                        onChange={this.editIngredientSectionName}
-                    />
-                    
-                    <button
-                        type="button"
-                        className="btn btn-default 
-                                   new-form-btn"
-                        aria-label="New Section"
-                        onClick={this.addIngredientSection}
-                    >
-                        <span
-                            className="glyphicon 
-                                       glyphicon-plus"
-                            aria-hidden="true"
-                        />
-                    </button>
-                    
-                </FormGroup>
+                                <FormGroup className="form-inline">
+                                    <FormControl
+                                        type="text"
+                                        placeholder="Add New 
+                                                     Ingredients Section
+                                                     Name (e.g. 
+                                                     Ingredients Needed
+                                                     For The Filling)"
+                                        value={this.state.ingSectionName}
+                                        onChange={this.editIngredientSectionName}
+                                    />
+                                    
+                                    <button
+                                        type="button"
+                                        className="btn btn-default 
+                                                   new-form-btn"
+                                        aria-label="New Section"
+                                        onClick={this.addIngredientSection}
+                                    >
+                                        <span
+                                            className="glyphicon 
+                                                       glyphicon-plus"
+                                            aria-hidden="true"
+                                        />
+                                    </button>
+                                </FormGroup>
                             </Panel>
                             
                             <Panel className="pastel-blue">
@@ -478,31 +484,31 @@ class RecipeModal extends React.Component {
                         {
                             this.props.editing ?
                             
-                            <div>
-                                <Button onClick={this.props.close}>
-                                    Close
-                                </Button>
-                                <Button onClick={this.updateRecipe}>
-                                    Update Recipe
-                                </Button>
-                                <Button onClick={this.undoChanges}>
-                                    Undo Changes
-                                </Button>
-                            </div>
+                                <div>
+                                    <Button onClick={this.props.close}>
+                                        Close
+                                    </Button>
+                                    <Button onClick={this.updateRecipe}>
+                                        Update Recipe
+                                    </Button>
+                                    <Button onClick={this.undoChanges}>
+                                        Undo Changes
+                                    </Button>
+                                </div>
                             
                             :
                             
-                            <div>
-                                <Button onClick={this.props.close}>
-                                    Close
-                                </Button>
-                                <Button onClick={this.addRecipe}>
-                                    Add Recipe
-                                </Button>
-                                <Button onClick={this.clearForm}>
-                                    Clear Form
-                                </Button>
-                            </div>
+                                <div>
+                                    <Button onClick={this.props.close}>
+                                        Close
+                                    </Button>
+                                    <Button onClick={this.addRecipe}>
+                                        Add Recipe
+                                    </Button>
+                                    <Button onClick={this.clearForm}>
+                                        Clear Form
+                                    </Button>
+                                </div>
                         }
                         
                     </Modal.Footer>
@@ -513,4 +519,10 @@ class RecipeModal extends React.Component {
     }
 }
 
+RecipeModal.propTypes = {
+    editing: React.PropTypes.bool,
+    wipRecipe: React.PropTypes.object,
+    addRecipe: React.PropTypes.func,
+    deleteFtn: React.PropTypes.func,
+}; 
 export default RecipeModal;

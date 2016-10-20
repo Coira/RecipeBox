@@ -14,7 +14,13 @@ const Home = (props) => (
     </div>
 );
 
-
+Home.propTypes = {
+    recipes: React.PropTypes.object,
+    actions: React.PropTypes.object,
+    editRecipe: React.PropTypes.func,
+    deleteRecipe: React.PropTypes.func,
+};
+    
 const mapStateToProps = (state) => (
     {
         recipes: state.get('recipes'),

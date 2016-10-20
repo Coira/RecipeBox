@@ -68,6 +68,8 @@ RecipeLink.propTypes = {
     cookTime: React.PropTypes.string,
     serves: React.PropTypes.string,
     url: React.PropTypes.string.isRequired,
+    editFtn: React.PropTypes.func.isRequired,
+    deleteFtn: React.PropTypes.func.isRequired,
 };
 
 export default RecipeLink;
