@@ -42,7 +42,6 @@ module.exports = {
 		}
 	}),
 	new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
 	new webpack.DefinePlugin({
 		'process.env': {
 			'NODE_ENV': JSON.stringify('production')
