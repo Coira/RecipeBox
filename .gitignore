@@ -2,4 +2,6 @@ node_modules
 _notes
 *#*
 bundle.js
+bundle.js.map
 .tern-port
+mongoose-free-6.1.exe
