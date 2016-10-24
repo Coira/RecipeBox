@@ -4,7 +4,7 @@ import NavLink from './NavLink';
 
 const TitleBar = (props) => (
     <div>
-        <div id="titleBar" className="flexCol">!
+        <div id="titleBar" className="flexCol">
             <div className="title">Recipe Box</div>
             
             <div
