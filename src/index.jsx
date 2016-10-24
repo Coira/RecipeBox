@@ -40,20 +40,23 @@ const RecipeBoxApp = connect(
 
 export default RecipeBoxApp;
 
+const routes = (
+    <Route path="/" component={RecipeBoxApp}>
+        <IndexRoute component={ConnectedHome} />
+        <Route
+            path="/recipes/:url"
+            component={ConnectedRecipeCard}
+        />
+    </Route>
+);
+
 ReactDOM.render(
     <Provider store={store}>
         <Router
             onUpdate={() => window.scrollTo(0, 0)}
             history={browserHistory}
-        >
-            <Route path="/" component={RecipeBoxApp}>
-                <IndexRoute component={ConnectedHome} />
-                <Route
-                    path="/recipes/:url"
-                    component={ConnectedRecipeCard}
-                />
-            </Route>
-        </Router>    
+            routes={routes}
+        />   
     </Provider>,
     document.getElementById('app')
 );
