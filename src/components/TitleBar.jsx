@@ -11,7 +11,7 @@ const TitleBar = (props) => (
                 className={classnames({ fixedHeader: props.fixHeader },
                                       'titleLinks')}
             >
-                <NavLink to={'/RecipeBox/'}>
+                <NavLink to={'/RecipeBox'}>
                     <div className="link">
                         Home
                     </div>

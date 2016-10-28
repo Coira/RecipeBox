@@ -26,7 +26,7 @@ module.exports = {
     },
     output: {
         path: 'docs',
-        publicPath: '/RecipeBox/',
+        publicPath: '/',
         filename: 'bundle.js'
     },
     devServer: {

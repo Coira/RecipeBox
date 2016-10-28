@@ -13,14 +13,14 @@ const Recipe = (props) => {
         const img = recipe.img ? recipe.img : 'generic.jpeg';
         const ingredientCategories = Object.keys(recipe.ingredientSections);
         const methodCategories = Object.keys(recipe.methodSections);
-
+        console.log(recipe.img);
         return (
             <div className="recipeCont">
                 <div className="recipe flexCol">
                     
                     <div className="titleItems flexRow">
                         <img
-                            src={img}
+                            src={`/${img}`}
                             alt="food_pic"
                             width="160"
                             height="120"
