@@ -22,7 +22,7 @@ const Recipe = (props) => {
                         <img
                             src={img}
                             alt="food_pic"
-                            width="120"
+                            width="160"
                             height="120"
                         />
                         <div className="recipeTitle">
