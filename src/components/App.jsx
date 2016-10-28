@@ -3,7 +3,7 @@ import Titlebar from './TitleBar';
 import RecipeModal from './RecipeModal';
 import Footer from './Footer';
 
-const imgPath = '{{ site.baseurl }}/imgs/';
+const imgPath = 'imgs/';
 
 class App extends React.Component {
     constructor(props) {

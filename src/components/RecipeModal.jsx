@@ -5,7 +5,7 @@ import { Button, FormGroup, Panel, Modal,
 import Draggable from 'react-draggable';
 import Section from './ModalComponents/Section';
 
-const imgPath = '/imgs/';
+const imgPath = 'imgs/';
 const imgList = [['bread.jpeg', 'bread'],
                  ['breakfast.jpg', 'croissants'],
                  ['burger-chips.jpeg', 'burger and chips'],
