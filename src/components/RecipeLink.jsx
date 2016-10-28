@@ -7,7 +7,7 @@ const RecipeLink = ({ name, prepTime, cookTime, serves, img, url,
                           
     <div className="recipeLink flexRow">
         <div className="foodInfo">
-            <NavLink to={`/recipes/${url}`}>
+            <NavLink to={`/RecipeBox/recipes/${url}`}>
                 <div className="foodImg">
                     <img
                         src={img}
@@ -19,7 +19,7 @@ const RecipeLink = ({ name, prepTime, cookTime, serves, img, url,
             </NavLink>
             <div className="text flexCol">
                 <div className="top">
-                    <NavLink to={`/recipes/${url}`}>
+                    <NavLink to={`/RecipeBox/recipes/${url}`}>
                         <div className="title">{name}</div>
                     </NavLink>
                     <div className="serves">
