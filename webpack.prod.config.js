@@ -25,12 +25,12 @@ module.exports = {
         extensions: ['', '.js', '.jsx']
     },
     output: {
-        path: 'dist',
+        path: 'docs',
         publicPath: '/RecipeBox/',
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: './dist',
+        contentBase: './docs',
         hot: true
     },
    plugins: [
