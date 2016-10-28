@@ -41,10 +41,10 @@ const RecipeBoxApp = connect(
 export default RecipeBoxApp;
 
 const routes = (
-    <Route path="/RecipeBox" component={RecipeBoxApp}>
+    <Route path="/" component={RecipeBoxApp}>
         <IndexRoute component={ConnectedHome} />
         <Route
-            path="/RecipeBox/recipes/:url"
+            path="/recipes/:url"
             component={ConnectedRecipeCard}
         />
     </Route>
