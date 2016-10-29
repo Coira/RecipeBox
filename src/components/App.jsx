@@ -31,7 +31,6 @@ class App extends React.Component {
                     nextRecipe.url = this.urlise(recipe.name);
                     nextRecipe.id = index;
                     nextRecipe.img = imgPath + recipe.img;
-                    
                     urlisedRecipes.push(nextRecipe);
                     this.actions.addRecipe(nextRecipe);
                 });

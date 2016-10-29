@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+import { Router, Route, browserHistory,
+         IndexRoute } from 'react-router';
 
 import { bindActionCreators } from 'redux';
 import { connect, Provider } from 'react-redux';
@@ -41,10 +42,10 @@ const RecipeBoxApp = connect(
 export default RecipeBoxApp;
 
 const routes = (
-    <Route path="/RecipeBox" component={RecipeBoxApp}>
+    <Route path="/" component={RecipeBoxApp}>
         <IndexRoute component={ConnectedHome} />
         <Route
-            path="/RecipeBox/recipes/:url"
+            path="/recipes/:url"
             component={ConnectedRecipeCard}
         />
     </Route>
