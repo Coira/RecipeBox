@@ -20,6 +20,9 @@
       "react"
     ]
   },
+  "engines": {
+    "node": "4.4.7"
+  }
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.5",
