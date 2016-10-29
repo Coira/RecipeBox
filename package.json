@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:dev": "webpack-dev-server --history-api-fallback",
-    "start:prod": "webpack && node server.js",
+    "start": "webpack-dev-server --history-api-fallback",
     "build": "webpack --progress -p --config ./webpack.prod.config.js"
   },
   "keywords": [],
@@ -37,8 +35,6 @@
     "autosize": "^3.0.17",
     "classnames": "^2.2.5",
     "compression": "^1.6.2",
-    "express": "^4.14.0",
-    "if-env": "^1.0.0",
     "immutable": "^3.8.1",
     "react": "^15.2.1",
     "react-bootstrap": "^0.30.0-rc.2",
